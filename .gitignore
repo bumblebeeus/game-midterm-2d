@@ -71,8 +71,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-# ProjectVersion compabilities
-ProjectVersion.txt
-
 # Rider-specific folder
 .idea/
