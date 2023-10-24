@@ -29,7 +29,16 @@ public class Sample_Multiplayer : MonoBehaviour
         };
         d.RegisterValueChangedCallback(evt =>
         {
-            t.value = evt.newValue.Equals("Server") ? $"{IpManager.GetIPv4()}:{IpManager.GetRandomPort()}" : "";
+            if (evt.newValue.Equals("Server"))
+            {
+                t.value = $"{IpManager.GetIPv4()}:{IpManager.GetRandomPort()}";
+                t.isReadOnly = true;
+            }
+            else
+            {
+                t.value = "";
+                t.isReadOnly = false;
+            }
         });
     }
 

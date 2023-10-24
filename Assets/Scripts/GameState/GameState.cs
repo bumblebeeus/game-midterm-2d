@@ -16,6 +16,13 @@ public class GameState
     private static Mutex _readMut = new Mutex();
     private static Mutex _writeMut = new Mutex();
 
+    private static Mutex _readCountMut = new Mutex();
+    private static Mutex _writeCountMut = new Mutex();
+    private uint writeCount;
+    private uint readCount;
+
+    public const uint MaxThread = 5;
+
     public GameState(ConnectionHandler connHandler, PlayerInfo currentPlayer, PlayerInfo otherPlayer, bool isEnd = false, bool isWin = false)
     {
         this.connHandler = connHandler;
@@ -27,15 +34,33 @@ public class GameState
         };
         this.isEnd = isEnd;
         this.isWin = isWin;
+        writeCount = 0;
+        readCount = 0;
     }
 
     public void SendCurrentData()
     {
         var t = new Thread(() =>
         {
+            _readCountMut.WaitOne();
+            var result = readCount < MaxThread;
+            if (result)
+            {
+                readCount += 1;
+            }
+            _readCountMut.ReleaseMutex();
+            if (!result)
+            {
+                return;
+            }
+            
             _readMut.WaitOne();
             connHandler.SendBytes(currentPlayer.Serialize());
             _readMut.ReleaseMutex();
+            
+            _readCountMut.WaitOne();
+            readCount -= 1;
+            _readCountMut.ReleaseMutex();
         });
         t.Start();
     }
@@ -44,10 +69,26 @@ public class GameState
     {
         var t = new Thread(() =>
         {
+            _writeCountMut.WaitOne();
+            var result = writeCount < MaxThread;
+            if (result)
+            {
+                writeCount += 1;
+            }
+            _writeCountMut.ReleaseMutex();
+            if (!result)
+            {
+                return;
+            }
+            
             _writeMut.WaitOne();
             otherPlayer[1] = PlayerInfo.Deserialize(connHandler.RecvBytes());
             SwapBuffer();
             _writeMut.ReleaseMutex();
+            
+            _writeCountMut.WaitOne();
+            writeCount -= 1;
+            _writeCountMut.ReleaseMutex();
         });
         t.Start();
     }
