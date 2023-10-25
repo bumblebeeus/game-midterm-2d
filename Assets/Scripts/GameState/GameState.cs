@@ -13,15 +13,12 @@ public class GameState
     private bool isEnd;
     private bool isWin;
 
-    private static Mutex _readMut = new Mutex();
-    private static Mutex _writeMut = new Mutex();
+    private static Mutex _rwMut = new Mutex();
 
-    private static Mutex _readCountMut = new Mutex();
-    private static Mutex _writeCountMut = new Mutex();
-    private uint writeCount;
-    private uint readCount;
+    private static Mutex _rwCountMut = new Mutex();
+    private uint rwCount;
 
-    public const uint MaxThread = 5;
+    public const uint MaxThread = 1;
 
     public GameState(ConnectionHandler connHandler, PlayerInfo currentPlayer, PlayerInfo otherPlayer, bool isEnd = false, bool isWin = false)
     {
@@ -34,61 +31,34 @@ public class GameState
         };
         this.isEnd = isEnd;
         this.isWin = isWin;
-        writeCount = 0;
-        readCount = 0;
+        rwCount = 0;
     }
 
-    public void SendCurrentData()
+    public void SendRecvData()
     {
         var t = new Thread(() =>
         {
-            _readCountMut.WaitOne();
-            var result = readCount < MaxThread;
+            _rwCountMut.WaitOne();
+            var result = rwCount < MaxThread;
             if (result)
             {
-                readCount += 1;
+                rwCount += 1;
             }
-            _readCountMut.ReleaseMutex();
+            _rwCountMut.ReleaseMutex();
             if (!result)
             {
                 return;
             }
-            
-            _readMut.WaitOne();
+
+            _rwMut.WaitOne();
             connHandler.SendBytes(currentPlayer.Serialize());
-            _readMut.ReleaseMutex();
-            
-            _readCountMut.WaitOne();
-            readCount -= 1;
-            _readCountMut.ReleaseMutex();
-        });
-        t.Start();
-    }
-
-    public void RecvOtherData()
-    {
-        var t = new Thread(() =>
-        {
-            _writeCountMut.WaitOne();
-            var result = writeCount < MaxThread;
-            if (result)
-            {
-                writeCount += 1;
-            }
-            _writeCountMut.ReleaseMutex();
-            if (!result)
-            {
-                return;
-            }
-            
-            _writeMut.WaitOne();
             otherPlayer[1] = PlayerInfo.Deserialize(connHandler.RecvBytes());
             SwapBuffer();
-            _writeMut.ReleaseMutex();
+            _rwMut.ReleaseMutex();
             
-            _writeCountMut.WaitOne();
-            writeCount -= 1;
-            _writeCountMut.ReleaseMutex();
+            _rwCountMut.WaitOne();
+            rwCount -= 1;
+            _rwCountMut.ReleaseMutex();
         });
         t.Start();
     }

@@ -87,13 +87,12 @@ public class Sample_Multiplayer : MonoBehaviour
     {
         if (isConnected)
         {
-            gs.SendCurrentData();
-            gs.RecvOtherData();
-            
+            gs.SetCurrentPosition(player.transform.position);
+            gs.SendRecvData(); 
             otherPlayer.transform.position = gs.GetOtherPosition();
-            gs.SetCurrentPosition(transform.position);
             return;
         }
+        // TODO: polling check disconnected
         // use counter to simulate tick's delay
         // polling ~2s
         counter += 1;

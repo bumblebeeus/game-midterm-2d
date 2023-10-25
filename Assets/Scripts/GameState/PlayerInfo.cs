@@ -23,7 +23,7 @@ public struct PlayerInfo
 
     public static PlayerInfo Deserialize(byte[] data)
     {
-        var buffer = FlxValue.FromBytes(data);
+        var buffer = FlxValue.FromBytes(data).AsMap;
         var info = new PlayerInfo();
         info.Position = new Vector2();
         info.Position.x = (float)buffer["pX"].AsDouble;
