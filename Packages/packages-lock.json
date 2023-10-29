@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.mzaks.flexbuffers": {
+      "version": "https://github.com/mzaks/FlexBuffersUnity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "26039ddb79111e64792bdffe6c45c6279fec6cf1"
+    },
     "com.unity.2d.animation": {
       "version": "9.0.3",
       "depth": 1,
