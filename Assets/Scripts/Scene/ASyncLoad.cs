@@ -20,7 +20,6 @@ public class ASyncLoad : MonoBehaviour
 
         loadingScene.SetActive(true);
 
-        double i = 0;
         while (!loadOperation.isDone)
         {
             float progress = Mathf.Clamp01(loadOperation.progress / .9f);
