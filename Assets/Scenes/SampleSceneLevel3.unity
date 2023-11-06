@@ -1148,7 +1148,7 @@ GameObject:
   - component: {fileID: 346906313}
   m_Layer: 0
   m_Name: Environment
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1266,7 +1266,7 @@ GameObject:
   - component: {fileID: 449297796}
   m_Layer: 3
   m_Name: Platforms
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6260,7 +6260,7 @@ GameObject:
   - component: {fileID: 473248657}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9298,7 +9298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5200612840764393278, guid: 32aae86710e544afea6b290fd88ab0dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.21
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5200612840764393278, guid: 32aae86710e544afea6b290fd88ab0dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9334,7 +9334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5437441454466488026, guid: 32aae86710e544afea6b290fd88ab0dd, type: 3}
       propertyPath: speed
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5437441454466488026, guid: 32aae86710e544afea6b290fd88ab0dd, type: 3}
       propertyPath: jumpForce
