@@ -44,14 +44,16 @@ public class MenuController : MonoBehaviour
         var _volumeSlider = _settingsBtns.Q<Slider>("VolumeSlider");
         _volumeSlider.highValue = 1.0f; // Set maximum slider value
         _volumeSlider.value = 0.5f;
+        var currentVolume = 1.0f;
 
         _volumeSlider.RegisterValueChangedCallback((changeEvent) =>
         {
             AudioListener.volume = changeEvent.newValue;
             Debug.Log(changeEvent.newValue);
+            currentVolume = AudioListener.volume;
         });
 
-        AudioListener.volume = 0.5f;
+        // AudioListener.volume = 0.5f;
 
         _backButton.clicked += () =>
         {
@@ -84,7 +86,7 @@ public class MenuController : MonoBehaviour
             bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
             _muteButton.style.backgroundImage = bg;
 
-            AudioListener.volume = _isMuted ? 0 : 1;
+            AudioListener.volume = _isMuted ? 0 : currentVolume;
 
         };
     }
