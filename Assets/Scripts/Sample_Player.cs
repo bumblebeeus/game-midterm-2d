@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     private Vector2 currVel;
     private Vector2 lookRight;
     private bool isFlip;
+    private Animator animator;
 
     private float jumpGauge;
     private bool isFill;
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         jumpVec = new Vector2(Mathf.Cos(jumpAngle * Mathf.Deg2Rad), Mathf.Sin(jumpAngle * Mathf.Deg2Rad)); // 45 dec
         maxVel = Vector2.right * speed;
         currVel = Vector2.zero;

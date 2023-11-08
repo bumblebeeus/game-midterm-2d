@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
     private GameObject player;
     void Start()
     {
-        player = GameObject.Find("Character Variant");
+        player = GameObject.Find("Character");
     }
 
     void Update()
