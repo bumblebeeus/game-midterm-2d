@@ -9,6 +9,13 @@ public class ASyncLoad : MonoBehaviour
     public GameObject loadingScene;
     public Slider loadingSlider;
 
+    public int initialSceneId;
+
+    void Start()
+    {
+        loadScene(initialSceneId);
+    }
+
     public void loadScene(int sceneId)
     {
         StartCoroutine(loadLevelAsync(sceneId));
