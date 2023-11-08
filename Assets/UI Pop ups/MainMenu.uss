@@ -14,5 +14,5 @@
     font-size: 40px;
     color: rgb(255, 255, 255);
     rotate: -10deg;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 }

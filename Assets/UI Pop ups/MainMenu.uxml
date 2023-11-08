@@ -1,12 +1,17 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Pop%20ups/MainMenu.uss?fileID=7433441132597879392&amp;guid=3ae27bfd0e9d8f94eafa778b45ff74df&amp;type=3#MainMenu" />
-    <ui:VisualElement name="LeftSection" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.5); width: 45%; height: 100%; margin-left: 50px; align-items: center;">
-        <ui:VisualElement name="Banner" style="background-image: resource(&apos;jko-logo-1024&apos;); width: 80%; height: 30%; align-items: center;" />
-        <ui:VisualElement name="Buttons" style="flex-grow: 1; justify-content: center; padding-bottom: 20%;">
-            <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayBtn" class="menu-button" />
-            <ui:Button text="Play with friends" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MultiplePlayBtn" class="menu-button" />
-            <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingBtn" class="menu-button" />
-            <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitBtn" class="menu-button" />
+    <ui:VisualElement name="Menu" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement name="LeftSection" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.5); width: 45%; height: 100%; margin-left: 50px; align-items: center;">
+            <ui:VisualElement name="Banner" style="background-image: resource(&apos;jko-logo-1024&apos;); width: 80%; height: 30%; align-items: center;" />
+            <ui:VisualElement name="Buttons" style="flex-grow: 1; justify-content: center; padding-bottom: 20%; min-width: 500px; width: auto;">
+                <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayBtn" class="menu-button" />
+                <ui:Button text="Play with friends" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MultiPlayerBtn" class="menu-button" />
+                <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingsBtn" class="menu-button" />
+                <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitBtn" class="menu-button" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightSection" style="flex-grow: 1; width: 40%; height: 100%; align-items: flex-end; justify-content: flex-end; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="MuteBtn" class="menu-button" style="background-image: resource(&apos;audio&apos;); width: 40px; height: 40px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
