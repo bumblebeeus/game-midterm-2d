@@ -48,9 +48,24 @@ public class MenuController : MonoBehaviour
 
         _volumeSlider.RegisterValueChangedCallback((changeEvent) =>
         {
+            var previousVolume = AudioListener.volume;
             AudioListener.volume = changeEvent.newValue;
             Debug.Log(changeEvent.newValue);
             currentVolume = AudioListener.volume;
+            if (currentVolume == 0)
+            {
+                _isMuted = true;
+                var bg = _muteButton.style.backgroundImage;
+                bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
+                _muteButton.style.backgroundImage = bg;
+            }
+            if (previousVolume == 0 && currentVolume > 0)
+            {
+                _isMuted = false;
+                var bg = _muteButton.style.backgroundImage;
+                bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
+                _muteButton.style.backgroundImage = bg;
+            }
         });
 
         // AudioListener.volume = 0.5f;
@@ -80,6 +95,7 @@ public class MenuController : MonoBehaviour
 
         _muteButton.clicked += () =>
         {
+            var previousVolume = AudioListener.volume;
             Debug.Log("Mute button clicked");
             _isMuted = !_isMuted;
             var bg = _muteButton.style.backgroundImage;
@@ -87,6 +103,16 @@ public class MenuController : MonoBehaviour
             _muteButton.style.backgroundImage = bg;
 
             AudioListener.volume = _isMuted ? 0 : currentVolume;
+            // I want to change the slider volume value to 0 when the mute button is clicked
+            _volumeSlider.value = _isMuted ? 0 : currentVolume;
+
+            // I want the volume will be at the same level as before when the mute button is clicked again
+            if (previousVolume == 0)
+            {
+                _volumeSlider.value = 0.5f;
+                AudioListener.volume = 0.5f;
+            }
+
 
         };
     }

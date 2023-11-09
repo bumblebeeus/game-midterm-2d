@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene-ForTestingOnly.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene 2 (Multiplayer communication).unity
     guid: fdd2dfd0b4379d14a885a87a4caa2593
+  - enabled: 1
+    path: Assets/UI Pop ups/Menu.unity
+    guid: 7fda7e89df32ef047951262a34bb9a8b
   m_configObjects: {}
