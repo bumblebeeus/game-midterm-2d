@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/UI%20Pop%20ups/ChooseLevel.uss?fileID=7433441132597879392&amp;guid=a9b96a8211df69b49bb702dc9fb156df&amp;type=3#ChooseLevel" />
     <ui:VisualElement style="flex-grow: 1; align-self: auto; background-color: rgb(0, 0, 0);">
         <ui:VisualElement style="flex-grow: 1; flex-direction: column; align-self: flex-end; justify-content: flex-start; align-items: flex-end; max-height: none;">
-            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="exitChooseLevelBtn" style="background-image: resource(&apos;Close&apos;); right: 4px; align-self: flex-end; top: 4px; width: 64px; height: 64px; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(255, 255, 255, 0);" />
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="exitChooseLevelBtn" style="background-image: resource(&apos;Close&apos;); right: 4px; align-self: flex-end; top: 4px; width: 64px; height: 64px; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(255, 255, 255, 0); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
         </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 1;">
             <ui:Label tabindex="-1" text="CHOOSE LEVEL" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Label" />

@@ -214,7 +214,7 @@ VideoPlayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115733665}
-  m_Enabled: 0
+  m_Enabled: 1
   m_VideoClip: {fileID: 32900000, guid: 933d06a6975a6ef48b258d871f005c13, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
@@ -347,7 +347,6 @@ MonoBehaviour:
   _unmuteSprite: {fileID: 21300000, guid: b4214e926b556b8479ad782853164490, type: 3}
   _settingBtnMenu: {fileID: 9197481963319205126, guid: 4c582f94611d93444a13b8735ecdd399, type: 3}
   chooseLevelObject: {fileID: 1745068505}
-  isDisabled: 0
 --- !u!82 &1211957195
 AudioSource:
   m_ObjectHideFlags: 0
@@ -358,7 +357,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c18f642e17c216f41b2d864470e77e8b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 76394f406fb7f45419eb36a21c613530, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -491,7 +490,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c18f642e17c216f41b2d864470e77e8b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 76394f406fb7f45419eb36a21c613530, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -657,7 +656,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuObject: {fileID: 1211957190}
-  isDisabled: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

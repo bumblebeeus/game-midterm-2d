@@ -10,10 +10,31 @@ using System.Runtime.CompilerServices;
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(UIDocument))]
 
+public class SettingsManager
+{
+    private static SettingsManager _instance;
+
+    public static SettingsManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new SettingsManager();
+            }
+            return _instance;
+        }
+    }
+
+    public float Volume { get; set; } = 0.5f;
+    public bool IsFullScreen { get; set; } = false;
+}
+
 public class MenuController : MonoBehaviour
 {
     private UIDocument _doc;
     private VisualElement _mainMenuBtnWrapper;
+    private static AudioSource _audioSource;
     //private Button _playButton;
     //private Button _multiPlayerButton;
     //private Button _settingsButton;
@@ -29,116 +50,6 @@ public class MenuController : MonoBehaviour
 
     public GameObject chooseLevelObject;
 
-    public bool isDisabled = false;
-
-
-    private void Start()
-    {
-        _doc = GetComponent<UIDocument>();
-        var root = _doc.rootVisualElement;
-        var _playButton = root.Q<Button>("PlayBtn");
-        var _multiPlayerButton = root.Q<Button>("MultiPlayerBtn");
-        var _exitButton = root.Q<Button>("ExitBtn");
-        var _muteButton = root.Q<Button>("MuteBtn");
-        var _settingsButton = root.Q<Button>("SettingsBtn");
-        _mainMenuBtnWrapper = root.Q<VisualElement>("Buttons");
-        
-
-        _settingsBtns = _settingBtnMenu.CloneTree();
-        var _backButton = _settingsBtns.Q<Button>("BackBtn");
-
-        var _volumeSlider = _settingsBtns.Q<Slider>("VolumeSlider");
-        var _toggle = _settingsBtns.Q<Toggle>("fullScreenToggle");
-        _volumeSlider.highValue = 1.0f; // Set maximum slider value
-        _volumeSlider.value = 0.5f;
-        var currentVolume = 1.0f;
-
-        _volumeSlider.RegisterValueChangedCallback((changeEvent) =>
-        {
-            var previousVolume = AudioListener.volume;
-            AudioListener.volume = changeEvent.newValue;
-            Debug.Log(changeEvent.newValue);
-            currentVolume = AudioListener.volume;
-            if (currentVolume == 0)
-            {
-                _isMuted = true;
-                var bg = _muteButton.style.backgroundImage;
-                bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
-                _muteButton.style.backgroundImage = bg;
-            }
-            if (previousVolume == 0 && currentVolume > 0)
-            {
-                _isMuted = false;
-                var bg = _muteButton.style.backgroundImage;
-                bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
-                _muteButton.style.backgroundImage = bg;
-            }
-        });
-
-        _toggle.RegisterValueChangedCallback((changeEvent) =>
-        {
-            Debug.Log("Toggle changed");
-            Screen.fullScreen = changeEvent.newValue;
-        });
-
-        // AudioListener.volume = 0.5f;
-
-        _backButton.clicked += () =>
-        {
-            _mainMenuBtnWrapper.Clear();
-            _mainMenuBtnWrapper.Add(_playButton);
-            _mainMenuBtnWrapper.Add(_multiPlayerButton);
-            _mainMenuBtnWrapper.Add(_settingsButton);
-            _mainMenuBtnWrapper.Add(_exitButton);
-        };
-
-        _playButton.clicked += () =>
-        {
-            Debug.Log("Play button clicked");
-            chooseLevelObject.SetActive(true);
-            this.gameObject.SetActive(false);
-        };
-        //_multiPlayerButton.clicked += MultiPlayerButtonOnClicked;
-        _settingsButton.clicked += () =>
-        {
-            _mainMenuBtnWrapper.Clear();
-            _mainMenuBtnWrapper.Add(_settingsBtns);
-        };
-
-        _exitButton.clicked += () =>
-        {
-            Debug.Log("Exit button clicked");
-            Application.Quit();
-        };
-
-        _muteButton.clicked += () =>
-        {
-            var previousVolume = AudioListener.volume;
-            Debug.Log("Mute button clicked");
-            _isMuted = !_isMuted;
-            var bg = _muteButton.style.backgroundImage;
-            bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
-            _muteButton.style.backgroundImage = bg;
-
-            AudioListener.volume = _isMuted ? 0 : currentVolume;
-            _volumeSlider.value = _isMuted ? 0 : currentVolume;
-
-            if (previousVolume == 0)
-            {
-                _volumeSlider.value = 0.5f;
-                AudioListener.volume = 0.5f;
-            }
-
-
-        };
-    }
-
-    // Start is called before the first frame update
-    // void Start()
-    // {
-        
-    // }
-
     // Update is called once per frame
     void Update()
     {
@@ -147,12 +58,6 @@ public class MenuController : MonoBehaviour
 
     private void OnEnable()
     {
-        if (!isDisabled)
-        {
-            return;
-            
-        }
-        isDisabled = false;
         _doc = GetComponent<UIDocument>();
         var root = _doc.rootVisualElement;
         var _playButton = root.Q<Button>("PlayBtn");
@@ -169,12 +74,27 @@ public class MenuController : MonoBehaviour
         var _volumeSlider = _settingsBtns.Q<Slider>("VolumeSlider");
         var _toggle = _settingsBtns.Q<Toggle>("fullScreenToggle");
         _volumeSlider.highValue = 1.0f; // Set maximum slider value
-        _volumeSlider.value = 0.5f;
+        _volumeSlider.value = SettingsManager.Instance.Volume;
+        _muteButton.style.backgroundImage = Background.FromSprite(SettingsManager.Instance.Volume == 0 ? _muteSprite : _unmuteSprite);
+        _toggle.value = SettingsManager.Instance.IsFullScreen;
         var currentVolume = 1.0f;
+
+        // if (_audioSource == null)
+        // {
+        //     _audioSource = GetComponent<AudioSource>();
+        //     _audioSource.Play();
+        //     Debug.Log("Audio source is null");
+        // }
+        // else
+        // {
+        //     _audioSource.UnPause();
+        //     Debug.Log("Audio source is not null");
+        // }
 
         _volumeSlider.RegisterValueChangedCallback((changeEvent) =>
         {
-            var previousVolume = AudioListener.volume;
+            // var previousVolume = AudioListener.volume;
+            var previousVolume = SettingsManager.Instance.Volume;
             AudioListener.volume = changeEvent.newValue;
             Debug.Log(changeEvent.newValue);
             currentVolume = AudioListener.volume;
@@ -185,19 +105,22 @@ public class MenuController : MonoBehaviour
                 bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
                 _muteButton.style.backgroundImage = bg;
             }
-            if (previousVolume == 0 && currentVolume > 0)
+            else
+            // if (previousVolume == 0 && currentVolume > 0)
             {
                 _isMuted = false;
                 var bg = _muteButton.style.backgroundImage;
                 bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
                 _muteButton.style.backgroundImage = bg;
             }
+            SettingsManager.Instance.Volume = changeEvent.newValue;
         });
 
         _toggle.RegisterValueChangedCallback((changeEvent) =>
         {
             Debug.Log("Toggle changed");
             Screen.fullScreen = changeEvent.newValue;
+            SettingsManager.Instance.IsFullScreen = changeEvent.newValue;
         });
 
 
@@ -233,28 +156,57 @@ public class MenuController : MonoBehaviour
 
         _muteButton.clicked += () =>
         {
-            var previousVolume = AudioListener.volume;
             Debug.Log("Mute button clicked");
             _isMuted = !_isMuted;
             var bg = _muteButton.style.backgroundImage;
             bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
             _muteButton.style.backgroundImage = bg;
 
-            AudioListener.volume = _isMuted ? 0 : currentVolume;
-            _volumeSlider.value = _isMuted ? 0 : currentVolume;
-
-            if (previousVolume == 0)
+            if (_isMuted)
             {
-                _volumeSlider.value = 0.5f;
-                AudioListener.volume = 0.5f;
+                // If muted, save the current volume and set the volume to 0
+                SettingsManager.Instance.Volume = AudioListener.volume;
+                AudioListener.volume = 0;
+                _volumeSlider.value = 0;
             }
-
-
+            else
+            {
+                // If unmuted, restore the volume to 0.5f
+                AudioListener.volume = 0.5f;
+                _volumeSlider.value = 0.5f;
+            }
         };
     }
 
-    private void OnDisable()
+    // private void OnDisable()
+    // {
+    //     if (_audioSource != null)
+    //     {
+    //         _audioSource.Pause();
+    //         Debug.Log("Audio source is not null on disable");
+    //     }
+    // }
+
+
+    private void Awake()
     {
-        isDisabled = true;
+        if (_audioSource == null)
+        {
+            _audioSource = GetComponent<AudioSource>();
+            DontDestroyOnLoad(_audioSource.gameObject);
+            _audioSource.Play();
+        }
+        else
+        {
+            _audioSource.UnPause();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (_audioSource != null)
+        {
+            _audioSource.Pause();
+        }
     }
 }
