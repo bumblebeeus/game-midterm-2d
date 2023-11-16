@@ -1,0 +1,2098 @@
+fileFormatVersion: 2
+guid: df6c26c1a62a1644ebc547db4bae75a1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 415
+        width: 996
+        height: 639
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ed31ceadc2dd54d8aadc1cb2c1f07e
+      internalID: 220426101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 290
+        width: 90
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e148564329a6b47856ff4ddfac75a9
+      internalID: -2041057435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 290
+        width: 91
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e6c173ac411f94c96afd8e98eea3ac
+      internalID: -272639816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_3
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 292
+        width: 91
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b5b47e59615eb44812a2bbb15eb193
+      internalID: 1285596335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_4
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 292
+        width: 90
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a28db9dc440564c9d86ae11f510778
+      internalID: 2134588651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_5
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 292
+        width: 90
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf088ff409e11a54390e6d7d311cd62b
+      internalID: 1407356576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_6
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 289
+        width: 90
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ef64723c1d38d49a3318be407445a0
+      internalID: -859634516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_7
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 292
+        width: 91
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7dec4d29f3ddf449748a03775ad029
+      internalID: -965954915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_8
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 292
+        width: 90
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb845a50be1bd341891b59980bc86f8
+      internalID: -1933334132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_9
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 253
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1046728cef4af1648bc9908ab2b1bbda
+      internalID: 1159664264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_10
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 253
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebc9d2baf5d6b84fbe3590763f15648
+      internalID: 397440306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_11
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 252
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfce8c81661e1c40a07d70d2afa87ab
+      internalID: -1572290831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 253
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359905fa1eb68cd41ae5c433045a5eb0
+      internalID: -477763277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_13
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 253
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903a02b80e1bd2c409ec7890eda8d350
+      internalID: -1558131117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_14
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 253
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1cee44593e9714cb3243f90f9af577
+      internalID: 1318022221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_15
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 252
+        width: 61
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7ddeb01792e3244b5407721f5d96f8
+      internalID: 2043422547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_16
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 253
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ad0f232cc406148b2365927e19e3e0
+      internalID: 1044738309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_17
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 253
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e462a9c48dc9f654aa6cbbc02ad6d592
+      internalID: -1288940434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_18
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 253
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d147db244a01504c8abc5003b1cee63
+      internalID: -1367648209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_19
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 253
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db540ac73a81d834c883521e8d0a595d
+      internalID: 17190718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 253
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c724a7f14a36d4342b55c48b664bd5ed
+      internalID: 137262676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_21
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 253
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5028df0e7615702498db66b26b950fd0
+      internalID: 1715133325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_22
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 253
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5623c1b12c37304dac9002e6a2c8608
+      internalID: 1724356948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_23
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 253
+        width: 62
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365065527e16b0a489ad5cadd4448b2c
+      internalID: -287298731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_24
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 253
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5630bd20e141454e883421fa95de0cb
+      internalID: -999516779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_25
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 253
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04003d2ac6027a843b40ab890a5668e7
+      internalID: -505043613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_26
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 252
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7280b328105d01a4fa9262044dd3c31a
+      internalID: -227797075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_27
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 253
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abebc2a2b5dbad34ca2e109e97c53dab
+      internalID: -139028452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_28
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 253
+        width: 61
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37a1585c1b62584cb0b739040f79467
+      internalID: 2009752306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_29
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 252
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86f79d12c305e44c9de380a05403a3b
+      internalID: -1702804729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 135
+        width: 90
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c70300561eb2cd41b5954076fc8968e
+      internalID: 1329143679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_31
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 135
+        width: 91
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1dfd1d75cb68442b27bdc812971692
+      internalID: 1661934648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_32
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 135
+        width: 90
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb844789ee75faa448681af92c8231a3
+      internalID: 1951116452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_33
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 135
+        width: 90
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a57a145a6437284cae7708048b3a4a2
+      internalID: -1042468145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_34
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 135
+        width: 92
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35d2b8de13977b4abc9bfb37c5d6b3f
+      internalID: -183501782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_35
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 135
+        width: 91
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395e89288ba154b4eb57d923a904e676
+      internalID: -1381724413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_36
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 135
+        width: 90
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e430f61fca6b1bb47bbc912d9305adb1
+      internalID: -1442154408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_37
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 135
+        width: 90
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b20685dc07f00d4e815729fcea4b12d
+      internalID: 331645474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_38
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 96
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378e256cca19f2a4f97f093826e5e604
+      internalID: 659407170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_39
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 96
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e76075491f742d4db70cac9d091a160
+      internalID: -1020027917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_40
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 97
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ffefd151351fb4d86a0df56de6be33
+      internalID: 229106693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_41
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 96
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25eacf779917ea448a965222d817111e
+      internalID: 674926654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_42
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 96
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099450c1e73062a449110169d9c7e217
+      internalID: -23376057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_43
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 96
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7c4ab7fd86f7343a5c8c22152c52c9
+      internalID: 178652739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_44
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 97
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d879b989148fc458ccee2f23440f1c
+      internalID: 1233485723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_45
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 96
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34bd897d51823540b0ab855bcca7f03
+      internalID: -1440135544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_46
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 96
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470f62f482d15224bb043ba051e6fb11
+      internalID: -359330258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_47
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 96
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801e2aa797f1e644e9ff19a4952fb502
+      internalID: -1643869378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_48
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 96
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3ade5b051f9ba4fb27e1d9e86f2a72
+      internalID: -2104327673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_49
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 97
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3099e523a03b9144a98cd912a2fdbf28
+      internalID: -1068721635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_50
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 96
+        width: 62
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de8867fb103f914aa8d08fe3fc29ccc
+      internalID: -1156440424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_51
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 96
+        width: 94
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec0089256b81074f9f9c172575877c3
+      internalID: 684910322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_52
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 96
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07864c6064960b040a37d7a310873989
+      internalID: 1227739719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_53
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 97
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6869ac6a6a2fe64995d3a5870221097
+      internalID: -647431937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_54
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 97
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51182bc51d42d4343aeaa5267f2dc33d
+      internalID: -1434383120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_55
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 97
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51b43a9cee38284c93e268d5350945c
+      internalID: 83514771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_56
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 97
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcca4434c2f923f4db0dd96396b96a58
+      internalID: -1928144357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_57
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 97
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c86708f4f05a8b4cae9cf32ef1a59ab
+      internalID: -2034363957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 20
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2e509ac6b5bad4885388bbe7b89791
+      internalID: 517601923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_59
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 25
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488d87d06de354b459bad0f852d2304a
+      internalID: -898299130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_60
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 26
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a489afc688d1c459a50f54e15d1974
+      internalID: -91220421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_61
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 26
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649fbff97b44eca4eb211640a7429a90
+      internalID: 934704869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_62
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 26
+        width: 7
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60868ec4988cd34abe4a379999de4cd
+      internalID: -758651560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_63
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 26
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea550bc8b695f64e955eb1862903cf5
+      internalID: 209944944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_64
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 26
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dcbbc10fd50c1a409bf293b86e4afe2
+      internalID: 1239813802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_65
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 25
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abad1c5db7df46543a189df0187e17cd
+      internalID: 1621919199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_66
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 26
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e92237495c9264eaeb7fc42fc635a3
+      internalID: 1877474231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_67
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 25
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5d7f5f9465fcd409d90d0f5d2fd4de
+      internalID: 1540556412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_68
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 26
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea221c029681504596a592906d01b54
+      internalID: -1071126316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_69
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 24
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1da220bd3e3fd4fa286231d82c5773
+      internalID: 532468738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_70
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 42
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18bd237a8f96494da706407f744b1b9
+      internalID: -967204990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_71
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 26
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64a0a2a9e60a2c4d8732af875e81fba
+      internalID: -1341945011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_72
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 25
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af354aae5e1fda43a00d7169eb112ae
+      internalID: -817963705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_73
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 27
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8829f6640e9144aa1b467d58bb0d70
+      internalID: 2117340628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_74
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 24
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99bea17d0fc8b846ab71c0721a13a87
+      internalID: 1782520925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_75
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 25
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e483c6f2451f85498adc5fcc0be1b41
+      internalID: -1350172230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_76
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 25
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2bd184aafcf41741a5d4b4a8952f2fa
+      internalID: 882511500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_77
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 25
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6946ba4d0c265b447b1656989bc73326
+      internalID: 286544260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_78
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 27
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42fb3020261ee14aa2683ac1bec9feb
+      internalID: 331870753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_79
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 24
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b984e19bd58634dbb9774480cbdc0c
+      internalID: -1428367869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_80
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 24
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06df79439130de4f84fdffb3d247e54
+      internalID: 1435225743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_81
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 27
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f13f60cbc1a19b4b8b2e68684195475
+      internalID: -323006927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_82
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 27
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d6f83adcefe744598fbf971c887373
+      internalID: 1640688979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_83
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 24
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869b41d5ae4062a4583678d9f0d64052
+      internalID: -1424045252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_84
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 25
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a5db7eed1522e4788b6c9991a8cfbe
+      internalID: 1377616496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_85
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 25
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9890a02fc09694f4f8b9288e0017785f
+      internalID: 324136994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_86
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 27
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db136853c44c93444b7eea7722718626
+      internalID: 832662915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_87
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 27
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2606ddf99b44045bf80184fc4a2e6e
+      internalID: 114707206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wooden-level-selection-game-asset-vector-2512129_88
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 24
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8e41e16fd67f945b3a86c1b66bed47
+      internalID: 1553530689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      wooden-level-selection-game-asset-vector-2512129_0: 220426101
+      wooden-level-selection-game-asset-vector-2512129_1: -2041057435
+      wooden-level-selection-game-asset-vector-2512129_10: 397440306
+      wooden-level-selection-game-asset-vector-2512129_11: -1572290831
+      wooden-level-selection-game-asset-vector-2512129_12: -477763277
+      wooden-level-selection-game-asset-vector-2512129_13: -1558131117
+      wooden-level-selection-game-asset-vector-2512129_14: 1318022221
+      wooden-level-selection-game-asset-vector-2512129_15: 2043422547
+      wooden-level-selection-game-asset-vector-2512129_16: 1044738309
+      wooden-level-selection-game-asset-vector-2512129_17: -1288940434
+      wooden-level-selection-game-asset-vector-2512129_18: -1367648209
+      wooden-level-selection-game-asset-vector-2512129_19: 17190718
+      wooden-level-selection-game-asset-vector-2512129_2: -272639816
+      wooden-level-selection-game-asset-vector-2512129_20: 137262676
+      wooden-level-selection-game-asset-vector-2512129_21: 1715133325
+      wooden-level-selection-game-asset-vector-2512129_22: 1724356948
+      wooden-level-selection-game-asset-vector-2512129_23: -287298731
+      wooden-level-selection-game-asset-vector-2512129_24: -999516779
+      wooden-level-selection-game-asset-vector-2512129_25: -505043613
+      wooden-level-selection-game-asset-vector-2512129_26: -227797075
+      wooden-level-selection-game-asset-vector-2512129_27: -139028452
+      wooden-level-selection-game-asset-vector-2512129_28: 2009752306
+      wooden-level-selection-game-asset-vector-2512129_29: -1702804729
+      wooden-level-selection-game-asset-vector-2512129_3: 1285596335
+      wooden-level-selection-game-asset-vector-2512129_30: 1329143679
+      wooden-level-selection-game-asset-vector-2512129_31: 1661934648
+      wooden-level-selection-game-asset-vector-2512129_32: 1951116452
+      wooden-level-selection-game-asset-vector-2512129_33: -1042468145
+      wooden-level-selection-game-asset-vector-2512129_34: -183501782
+      wooden-level-selection-game-asset-vector-2512129_35: -1381724413
+      wooden-level-selection-game-asset-vector-2512129_36: -1442154408
+      wooden-level-selection-game-asset-vector-2512129_37: 331645474
+      wooden-level-selection-game-asset-vector-2512129_38: 659407170
+      wooden-level-selection-game-asset-vector-2512129_39: -1020027917
+      wooden-level-selection-game-asset-vector-2512129_4: 2134588651
+      wooden-level-selection-game-asset-vector-2512129_40: 229106693
+      wooden-level-selection-game-asset-vector-2512129_41: 674926654
+      wooden-level-selection-game-asset-vector-2512129_42: -23376057
+      wooden-level-selection-game-asset-vector-2512129_43: 178652739
+      wooden-level-selection-game-asset-vector-2512129_44: 1233485723
+      wooden-level-selection-game-asset-vector-2512129_45: -1440135544
+      wooden-level-selection-game-asset-vector-2512129_46: -359330258
+      wooden-level-selection-game-asset-vector-2512129_47: -1643869378
+      wooden-level-selection-game-asset-vector-2512129_48: -2104327673
+      wooden-level-selection-game-asset-vector-2512129_49: -1068721635
+      wooden-level-selection-game-asset-vector-2512129_5: 1407356576
+      wooden-level-selection-game-asset-vector-2512129_50: -1156440424
+      wooden-level-selection-game-asset-vector-2512129_51: 684910322
+      wooden-level-selection-game-asset-vector-2512129_52: 1227739719
+      wooden-level-selection-game-asset-vector-2512129_53: -647431937
+      wooden-level-selection-game-asset-vector-2512129_54: -1434383120
+      wooden-level-selection-game-asset-vector-2512129_55: 83514771
+      wooden-level-selection-game-asset-vector-2512129_56: -1928144357
+      wooden-level-selection-game-asset-vector-2512129_57: -2034363957
+      wooden-level-selection-game-asset-vector-2512129_58: 517601923
+      wooden-level-selection-game-asset-vector-2512129_59: -898299130
+      wooden-level-selection-game-asset-vector-2512129_6: -859634516
+      wooden-level-selection-game-asset-vector-2512129_60: -91220421
+      wooden-level-selection-game-asset-vector-2512129_61: 934704869
+      wooden-level-selection-game-asset-vector-2512129_62: -758651560
+      wooden-level-selection-game-asset-vector-2512129_63: 209944944
+      wooden-level-selection-game-asset-vector-2512129_64: 1239813802
+      wooden-level-selection-game-asset-vector-2512129_65: 1621919199
+      wooden-level-selection-game-asset-vector-2512129_66: 1877474231
+      wooden-level-selection-game-asset-vector-2512129_67: 1540556412
+      wooden-level-selection-game-asset-vector-2512129_68: -1071126316
+      wooden-level-selection-game-asset-vector-2512129_69: 532468738
+      wooden-level-selection-game-asset-vector-2512129_7: -965954915
+      wooden-level-selection-game-asset-vector-2512129_70: -967204990
+      wooden-level-selection-game-asset-vector-2512129_71: -1341945011
+      wooden-level-selection-game-asset-vector-2512129_72: -817963705
+      wooden-level-selection-game-asset-vector-2512129_73: 2117340628
+      wooden-level-selection-game-asset-vector-2512129_74: 1782520925
+      wooden-level-selection-game-asset-vector-2512129_75: -1350172230
+      wooden-level-selection-game-asset-vector-2512129_76: 882511500
+      wooden-level-selection-game-asset-vector-2512129_77: 286544260
+      wooden-level-selection-game-asset-vector-2512129_78: 331870753
+      wooden-level-selection-game-asset-vector-2512129_79: -1428367869
+      wooden-level-selection-game-asset-vector-2512129_8: -1933334132
+      wooden-level-selection-game-asset-vector-2512129_80: 1435225743
+      wooden-level-selection-game-asset-vector-2512129_81: -323006927
+      wooden-level-selection-game-asset-vector-2512129_82: 1640688979
+      wooden-level-selection-game-asset-vector-2512129_83: -1424045252
+      wooden-level-selection-game-asset-vector-2512129_84: 1377616496
+      wooden-level-selection-game-asset-vector-2512129_85: 324136994
+      wooden-level-selection-game-asset-vector-2512129_86: 832662915
+      wooden-level-selection-game-asset-vector-2512129_87: 114707206
+      wooden-level-selection-game-asset-vector-2512129_88: 1553530689
+      wooden-level-selection-game-asset-vector-2512129_9: 1159664264
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
