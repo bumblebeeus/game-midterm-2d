@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Pop%20ups/ChooseLevel.uss?fileID=7433441132597879392&amp;guid=a9b96a8211df69b49bb702dc9fb156df&amp;type=3#ChooseLevel" />
+    <ui:VisualElement style="flex-grow: 1; align-self: auto; background-color: rgb(0, 0, 0);">
+        <ui:VisualElement style="flex-grow: 1; flex-direction: column; align-self: flex-end; justify-content: flex-start; align-items: flex-end; max-height: none;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="exitChooseLevelBtn" style="background-image: resource(&apos;Close&apos;); right: 4px; align-self: flex-end; top: 4px; width: 64px; height: 64px; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(255, 255, 255, 0);" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="CHOOSE LEVEL" parse-escape-sequences="true" display-tooltip-when-elided="true" class="Label" />
+            <ui:VisualElement style="flex-grow: 1; flex-direction: column; align-items: stretch; justify-content: flex-start;">
+                <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center; align-self: center; flex-direction: row;">
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Level1Btn" class="button_level" style="background-image: url(&apos;project://database/Assets/Sprites/wooden-level-selection-game-asset-vector-2512129.png?fileID=-272639816&amp;guid=df6c26c1a62a1644ebc547db4bae75a1&amp;type=3#wooden-level-selection-game-asset-vector-2512129_2&apos;);" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Level2Btn" class="button_level" style="background-image: url(&apos;project://database/Assets/Sprites/wooden-level-selection-game-asset-vector-2512129.png?fileID=1285596335&amp;guid=df6c26c1a62a1644ebc547db4bae75a1&amp;type=3#wooden-level-selection-game-asset-vector-2512129_3&apos;);" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" class="button_level" style="background-image: url(&apos;project://database/Assets/Sprites/wooden-level-selection-game-asset-vector-2512129.png?fileID=331645474&amp;guid=df6c26c1a62a1644ebc547db4bae75a1&amp;type=3#wooden-level-selection-game-asset-vector-2512129_37&apos;);" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" class="button_level" style="background-image: url(&apos;project://database/Assets/Sprites/wooden-level-selection-game-asset-vector-2512129.png?fileID=331645474&amp;guid=df6c26c1a62a1644ebc547db4bae75a1&amp;type=3#wooden-level-selection-game-asset-vector-2512129_37&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center; align-self: center; flex-direction: row;">
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" class="button_level" style="background-image: url(&apos;project://database/Assets/Sprites/wooden-level-selection-game-asset-vector-2512129.png?fileID=331645474&amp;guid=df6c26c1a62a1644ebc547db4bae75a1&amp;type=3#wooden-level-selection-game-asset-vector-2512129_37&apos;);" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" class="button_level" style="background-image: url(&apos;project://database/Assets/Sprites/wooden-level-selection-game-asset-vector-2512129.png?fileID=331645474&amp;guid=df6c26c1a62a1644ebc547db4bae75a1&amp;type=3#wooden-level-selection-game-asset-vector-2512129_37&apos;);" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" class="button_level" style="background-image: url(&apos;project://database/Assets/Sprites/wooden-level-selection-game-asset-vector-2512129.png?fileID=331645474&amp;guid=df6c26c1a62a1644ebc547db4bae75a1&amp;type=3#wooden-level-selection-game-asset-vector-2512129_37&apos;);" />
+                    <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" class="button_level" style="background-image: url(&apos;project://database/Assets/Sprites/wooden-level-selection-game-asset-vector-2512129.png?fileID=331645474&amp;guid=df6c26c1a62a1644ebc547db4bae75a1&amp;type=3#wooden-level-selection-game-asset-vector-2512129_37&apos;);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using System.Runtime.CompilerServices;
+//using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(UIDocument))]
@@ -26,6 +27,11 @@ public class MenuController : MonoBehaviour
     private VisualTreeAsset _settingBtnMenu;
     private VisualElement _settingsBtns;
 
+    public GameObject chooseLevelObject;
+
+    public bool isDisabled = false;
+
+
     private void Start()
     {
         _doc = GetComponent<UIDocument>();
@@ -42,6 +48,7 @@ public class MenuController : MonoBehaviour
         var _backButton = _settingsBtns.Q<Button>("BackBtn");
 
         var _volumeSlider = _settingsBtns.Q<Slider>("VolumeSlider");
+        var _toggle = _settingsBtns.Q<Toggle>("fullScreenToggle");
         _volumeSlider.highValue = 1.0f; // Set maximum slider value
         _volumeSlider.value = 0.5f;
         var currentVolume = 1.0f;
@@ -68,6 +75,12 @@ public class MenuController : MonoBehaviour
             }
         });
 
+        _toggle.RegisterValueChangedCallback((changeEvent) =>
+        {
+            Debug.Log("Toggle changed");
+            Screen.fullScreen = changeEvent.newValue;
+        });
+
         // AudioListener.volume = 0.5f;
 
         _backButton.clicked += () =>
@@ -79,7 +92,12 @@ public class MenuController : MonoBehaviour
             _mainMenuBtnWrapper.Add(_exitButton);
         };
 
-        //_playButton.clicked += PlayButtonOnClicked;
+        _playButton.clicked += () =>
+        {
+            Debug.Log("Play button clicked");
+            chooseLevelObject.SetActive(true);
+            this.gameObject.SetActive(false);
+        };
         //_multiPlayerButton.clicked += MultiPlayerButtonOnClicked;
         _settingsButton.clicked += () =>
         {
@@ -103,10 +121,8 @@ public class MenuController : MonoBehaviour
             _muteButton.style.backgroundImage = bg;
 
             AudioListener.volume = _isMuted ? 0 : currentVolume;
-            // I want to change the slider volume value to 0 when the mute button is clicked
             _volumeSlider.value = _isMuted ? 0 : currentVolume;
 
-            // I want the volume will be at the same level as before when the mute button is clicked again
             if (previousVolume == 0)
             {
                 _volumeSlider.value = 0.5f;
@@ -116,27 +132,6 @@ public class MenuController : MonoBehaviour
 
         };
     }
-
-    private void PlayButtonOnClicked()
-    {
-        // SceneManager.LoadScene("ChooseLevel");
-        return;
-    }
-        
-    private void MultiPlayerButtonOnClicked()
-    {
-        // SceneManager.LoadScene("Multiplayer");
-        return;
-    }
-
-    private void SettingsButtonOnClicked()
-    {
-        // SceneManager.LoadScene("Settings");
-        return;
-    }
-
-
-
 
     // Start is called before the first frame update
     // void Start()
@@ -148,5 +143,118 @@ public class MenuController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnEnable()
+    {
+        if (!isDisabled)
+        {
+            return;
+            
+        }
+        isDisabled = false;
+        _doc = GetComponent<UIDocument>();
+        var root = _doc.rootVisualElement;
+        var _playButton = root.Q<Button>("PlayBtn");
+        var _multiPlayerButton = root.Q<Button>("MultiPlayerBtn");
+        var _exitButton = root.Q<Button>("ExitBtn");
+        var _muteButton = root.Q<Button>("MuteBtn");
+        var _settingsButton = root.Q<Button>("SettingsBtn");
+        _mainMenuBtnWrapper = root.Q<VisualElement>("Buttons");
+
+
+        _settingsBtns = _settingBtnMenu.CloneTree();
+        var _backButton = _settingsBtns.Q<Button>("BackBtn");
+
+        var _volumeSlider = _settingsBtns.Q<Slider>("VolumeSlider");
+        var _toggle = _settingsBtns.Q<Toggle>("fullScreenToggle");
+        _volumeSlider.highValue = 1.0f; // Set maximum slider value
+        _volumeSlider.value = 0.5f;
+        var currentVolume = 1.0f;
+
+        _volumeSlider.RegisterValueChangedCallback((changeEvent) =>
+        {
+            var previousVolume = AudioListener.volume;
+            AudioListener.volume = changeEvent.newValue;
+            Debug.Log(changeEvent.newValue);
+            currentVolume = AudioListener.volume;
+            if (currentVolume == 0)
+            {
+                _isMuted = true;
+                var bg = _muteButton.style.backgroundImage;
+                bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
+                _muteButton.style.backgroundImage = bg;
+            }
+            if (previousVolume == 0 && currentVolume > 0)
+            {
+                _isMuted = false;
+                var bg = _muteButton.style.backgroundImage;
+                bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
+                _muteButton.style.backgroundImage = bg;
+            }
+        });
+
+        _toggle.RegisterValueChangedCallback((changeEvent) =>
+        {
+            Debug.Log("Toggle changed");
+            Screen.fullScreen = changeEvent.newValue;
+        });
+
+
+        // AudioListener.volume = 0.5f;
+
+        _backButton.clicked += () =>
+        {
+            _mainMenuBtnWrapper.Clear();
+            _mainMenuBtnWrapper.Add(_playButton);
+            _mainMenuBtnWrapper.Add(_multiPlayerButton);
+            _mainMenuBtnWrapper.Add(_settingsButton);
+            _mainMenuBtnWrapper.Add(_exitButton);
+        };
+
+        _playButton.clicked += () =>
+        {
+            Debug.Log("Play button clicked");
+            chooseLevelObject.SetActive(true);
+            this.gameObject.SetActive(false);
+        };
+        //_multiPlayerButton.clicked += MultiPlayerButtonOnClicked;
+        _settingsButton.clicked += () =>
+        {
+            _mainMenuBtnWrapper.Clear();
+            _mainMenuBtnWrapper.Add(_settingsBtns);
+        };
+
+        _exitButton.clicked += () =>
+        {
+            Debug.Log("Exit button clicked");
+            Application.Quit();
+        };
+
+        _muteButton.clicked += () =>
+        {
+            var previousVolume = AudioListener.volume;
+            Debug.Log("Mute button clicked");
+            _isMuted = !_isMuted;
+            var bg = _muteButton.style.backgroundImage;
+            bg.value = Background.FromSprite(_isMuted ? _muteSprite : _unmuteSprite);
+            _muteButton.style.backgroundImage = bg;
+
+            AudioListener.volume = _isMuted ? 0 : currentVolume;
+            _volumeSlider.value = _isMuted ? 0 : currentVolume;
+
+            if (previousVolume == 0)
+            {
+                _volumeSlider.value = 0.5f;
+                AudioListener.volume = 0.5f;
+            }
+
+
+        };
+    }
+
+    private void OnDisable()
+    {
+        isDisabled = true;
     }
 }
