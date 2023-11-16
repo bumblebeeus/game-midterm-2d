@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
 
     private Vector2 inverseX;
     // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
