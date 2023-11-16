@@ -1083,6 +1083,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 6993849961858490298, guid: 4e70bc7f2bc8946ff9bbdf77e52c6164, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1299,7 +1303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 346906313}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1417,7 +1421,7 @@ GameObject:
   - component: {fileID: 449297798}
   - component: {fileID: 449297797}
   - component: {fileID: 449297796}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Platforms
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3677,7 +3681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 473248658}
   - component: {fileID: 473248657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4538,7 +4542,7 @@ GameObject:
   - component: {fileID: 762677739}
   - component: {fileID: 762677738}
   - component: {fileID: 762677737}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -9918,6 +9922,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7904647865678070127, guid: 8fb31366db3c34259a9f0247a57dffff, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10551,7 +10559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2018097348}
   - component: {fileID: 2018097349}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
