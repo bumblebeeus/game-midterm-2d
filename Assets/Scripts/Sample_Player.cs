@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     public PhysicsMaterial2D normal;
     public PhysicsMaterial2D bounce;
+    public GameObject controllerGameObject;
     
     
     public LayerMask layerMask;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
     private Vector2 maxVel;
     private Rigidbody2D rb;
     private Collider2D collider;
+    private CrossInputController inputController;
 
     private bool raycast;
 
@@ -54,7 +56,7 @@ public class Player : MonoBehaviour
         isFill = false;
         inverseX = new Vector2(-1, 1);
         raycast = false;
-       
+        inputController = controllerGameObject.GetComponent<CrossInputController>();
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -80,24 +82,24 @@ public class Player : MonoBehaviour
         {
             collider.sharedMaterial = normal;
             // Check if player is moving
-            var keyboardHorizontal = Input.GetAxisRaw("Horizontal");
-            if (keyboardHorizontal < 0)
+            var keyboardHorizontal = inputController.GetHorizontal();
+            switch (keyboardHorizontal)
             {
-                isFlip = true;
-                animator.Play("move");
-            }
-            else if (keyboardHorizontal > 0)
-            {
-                isFlip = false;
-                animator.Play("move");
-            }
-            else
-            {
-                animator.Play("idle");
+                case < 0:
+                    isFlip = true;
+                    animator.Play("move");
+                    break;
+                case > 0:
+                    isFlip = false;
+                    animator.Play("move");
+                    break;
+                default:
+                    animator.Play("idle");
+                    break;
             }
             transform.localScale = isFlip ? lookRight * inverseX : lookRight;
             // Charging the jump
-            if (Input.GetButton("Jump"))
+            if (inputController.GetJump())
             {
                 currVel = Vector2.zero;
                 animator.Play("crouch");
@@ -105,7 +107,7 @@ public class Player : MonoBehaviour
                 return;
             }
             // Jump
-            if (Input.GetButtonUp("Jump"))
+            if (isFill)
             {
                 isFill = false;
                 raycast = false;
