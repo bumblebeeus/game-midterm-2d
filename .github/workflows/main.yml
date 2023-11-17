@@ -3,6 +3,7 @@ name: Build 📝 🚧 🎮
 on:
   push:
     tags: [ 'v*.*' ]
+  workflow_dispatch:
 
 jobs:
   build_artifact:
@@ -31,4 +32,31 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: Build-Windows
+          path: build
+  build_artifact_2:
+    name: Build for Windows
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+      - uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
+      - uses: game-ci/unity-builder@v3
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: Android
+          versioning: Semantic
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Build-Android
           path: build
