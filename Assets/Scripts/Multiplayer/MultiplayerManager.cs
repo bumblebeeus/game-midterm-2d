@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -12,9 +13,11 @@ public class MultiplayerManager : MonoBehaviour
     public GameObject[] skins;
     public GameObject multiplayerPopup;
     public GameObject selectMapPopup;
+    public GameObject winPopup;
     private Multiplayer multiplayer;
     private GameObject currentPlayer;
     private List<GameObject> otherPlayers = new();
+    private float timer = 0;
 
     private uint selectedMap = 0;
     private bool isStart = false;
@@ -109,6 +112,24 @@ public class MultiplayerManager : MonoBehaviour
         StartGame();
     }
 
+    IEnumerator JumpBackToMainMenu()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        yield return new WaitForSeconds(5);
+        // The Application loads the Scene in the background at the same time as the current Scene.
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Menu", 
+            LoadSceneMode.Additive);
+        // Wait until the last operation fully loads to return anything
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        
+        // Unload the previous Scene
+        Destroy(gameObject);
+        SceneManager.UnloadSceneAsync(currentScene);
+    }
+
     void StartGame()
     {
         multiplayer.LoopThrough((sessionId, playerData) =>
@@ -150,6 +171,19 @@ public class MultiplayerManager : MonoBehaviour
                    new Vector3(-1, 1, 1) : new Vector3(1, 1, 1);
                counter += 1;
            });
+       });
+       
+       // check win
+       multiplayer.OnWin((sessionIdWin) =>
+       {
+           if (sessionIdWin.Length == 0) return;
+           isStart = false;
+           var popup = Instantiate(winPopup, Vector3.zero, Quaternion.identity);
+           var root = popup.GetComponent<UIDocument>().rootVisualElement;
+           root.Q<Label>("Win").text = sessionIdWin == multiplayer.GetCurrentSessionId() ? "YOU WIN" : "OTHER WIN";
+           var roundedTime = Mathf.FloorToInt(timer);
+           root.Q<Label>("Time").text = $"Time taken: {Mathf.FloorToInt(timer/60)} minutes {timer % 60} seconds";
+           StartCoroutine(JumpBackToMainMenu());
        });
        
        isStart = true;
@@ -194,9 +228,23 @@ public class MultiplayerManager : MonoBehaviour
             var curPos = currentPlayer.transform.position;
             var isFlip = currentPlayer.transform.localScale.x < 0;
             await multiplayer.SendData("move", new {x = curPos.x, y=curPos.y, isFlip=isFlip});
+            // Check win
+            if (Vector2.SqrMagnitude((Vector2)curPos - maps[selectedMap].endPos) < 4f)
+            {
+                await multiplayer.SendData("declareWin", new {});
+            }
         }
     }
-    
+
+    private void FixedUpdate()
+    {
+        if (isStart)
+        {
+            timer += Time.deltaTime;
+        }
+    }
+
+
     private void OnApplicationQuit()
     {
        multiplayer.Disconnect(); 

@@ -18,6 +18,9 @@ public partial class GameStateSchema : Schema {
 	[Type(2, "uint32")]
 	public uint mapId = default(uint);
 
+	[Type(3, "string")]
+	public string sessionIdWin = default(string);
+
 	/*
 	 * Support for individual property change callbacks below...
 	 */
@@ -58,11 +61,24 @@ public partial class GameStateSchema : Schema {
 		};
 	}
 
+	protected event PropertyChangeHandler<string> __sessionIdWinChange;
+	public Action OnSessionIdWinChange(PropertyChangeHandler<string> __handler, bool __immediate = true) {
+		if (__callbacks == null) { __callbacks = new SchemaCallbacks(); }
+		__callbacks.AddPropertyCallback(nameof(this.sessionIdWin));
+		__sessionIdWinChange += __handler;
+		if (__immediate && this.sessionIdWin != default(string)) { __handler(this.sessionIdWin, default(string)); }
+		return () => {
+			__callbacks.RemovePropertyCallback(nameof(sessionIdWin));
+			__sessionIdWinChange -= __handler;
+		};
+	}
+
 	protected override void TriggerFieldChange(DataChange change) {
 		switch (change.Field) {
 			case nameof(players): __playersChange?.Invoke((MapSchema<PlayerSchema>) change.Value, (MapSchema<PlayerSchema>) change.PreviousValue); break;
 			case nameof(isStart): __isStartChange?.Invoke((bool) change.Value, (bool) change.PreviousValue); break;
 			case nameof(mapId): __mapIdChange?.Invoke((uint) change.Value, (uint) change.PreviousValue); break;
+			case nameof(sessionIdWin): __sessionIdWinChange?.Invoke((string) change.Value, (string) change.PreviousValue); break;
 			default: break;
 		}
 	}

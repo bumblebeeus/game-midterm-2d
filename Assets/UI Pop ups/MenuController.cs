@@ -141,7 +141,7 @@ public class MenuController : MonoBehaviour
             chooseLevelObject.SetActive(true);
             this.gameObject.SetActive(false);
         };
-        //_multiPlayerButton.clicked += MultiPlayerButtonOnClicked;
+        _multiPlayerButton.clicked += () => StartCoroutine(OpenMultiplayer());
         _settingsButton.clicked += () =>
         {
             _mainMenuBtnWrapper.Clear();
@@ -176,6 +176,23 @@ public class MenuController : MonoBehaviour
                 _volumeSlider.value = 0.5f;
             }
         };
+    }
+
+    private IEnumerator OpenMultiplayer()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        // The Application loads the Scene in the background at the same time as the current Scene.
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Multiplayer", 
+            LoadSceneMode.Additive);
+        // Wait until the last operation fully loads to return anything
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        Destroy(gameObject);
+        
+        // Unload the previous Scene
+        SceneManager.UnloadSceneAsync(currentScene);
     }
 
     // private void OnDisable()

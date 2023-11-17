@@ -70,6 +70,17 @@ public class Multiplayer
         }
     }
 
+    public void OnWin(Action<string> callback)
+    {
+        if (cachedRoom != null)
+        {
+            cachedRoom.State.OnSessionIdWinChange((newVal, _) =>
+            {
+                callback(newVal);
+            });
+        }
+    }
+
     public int GetNumberOfPlayer()
     {
         return cachedRoom != null ? cachedRoom.State.players.Count-1 : 0;

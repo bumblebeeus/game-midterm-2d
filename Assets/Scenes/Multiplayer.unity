@@ -349,6 +349,7 @@ MonoBehaviour:
   - {fileID: 7208405990736855554, guid: 200d90d1d14df244a8a56a2919e2085b, type: 3}
   multiplayerPopup: {fileID: 250739968}
   selectMapPopup: {fileID: 347288746}
+  winPopup: {fileID: 8141945078776340806, guid: 5c54bf9b35db3cd47be063ea833e3c97, type: 3}
 --- !u!4 &1120923745
 Transform:
   m_ObjectHideFlags: 0
