@@ -1,8 +1,8 @@
 {
     "server": "sql108.infinityfree.com",
     "port": 3306,
-    "database": "if0_35385489_JumpKingGame",
+    "database": "if0_35385489_JumpKing",
     "user id": "if0_35385489",
-    "password": "",
+    "password": "3l18NOWGzNlTq69",
     "pooling": true
 }
