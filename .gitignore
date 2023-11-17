@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Rider-specific folder
 .idea/
+
+# Environment variables
+Assets/Scripts/Configs/Environment.json
