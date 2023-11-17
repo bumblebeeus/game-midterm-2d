@@ -137,11 +137,12 @@ public class MenuController : MonoBehaviour
 
         _playButton.clicked += () =>
         {
-            Debug.Log("Play button clicked");
-            chooseLevelObject.SetActive(true);
-            this.gameObject.SetActive(false);
+            // Debug.Log("Play button clicked");
+            // chooseLevelObject.SetActive(true);
+            // this.gameObject.SetActive(false)
+            StartCoroutine(OpenScene("SinglePlayer"));
         };
-        _multiPlayerButton.clicked += () => StartCoroutine(OpenMultiplayer());
+        _multiPlayerButton.clicked += () => StartCoroutine(OpenScene("Multiplayer"));
         _settingsButton.clicked += () =>
         {
             _mainMenuBtnWrapper.Clear();
@@ -178,11 +179,11 @@ public class MenuController : MonoBehaviour
         };
     }
 
-    private IEnumerator OpenMultiplayer()
+    private IEnumerator OpenScene(string sceneName)
     {
         Scene currentScene = SceneManager.GetActiveScene();
         // The Application loads the Scene in the background at the same time as the current Scene.
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Multiplayer", 
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, 
             LoadSceneMode.Additive);
         // Wait until the last operation fully loads to return anything
         while (!asyncLoad.isDone)
