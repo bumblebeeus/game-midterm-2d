@@ -17,10 +17,12 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(
-            transform.position.x,
-            Mathf.Lerp(transform.position.y, player.gameObject.transform.position.y + 3, 0.01f),
+        var position = transform.position;
+        position = new Vector3(
+            position.x,
+            Mathf.Lerp(position.y, player.gameObject.transform.position.y + 1, 0.01f),
             -10
         );
+        transform.position = position;
     }
 }
