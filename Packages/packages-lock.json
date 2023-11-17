@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.mzaks.flexbuffers": {
+      "version": "https://github.com/mzaks/FlexBuffersUnity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "26039ddb79111e64792bdffe6c45c6279fec6cf1"
+    },
     "com.unity.2d.animation": {
       "version": "9.0.3",
       "depth": 1,
@@ -271,6 +278,23 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.legacyinputhelpers": {
+      "version": "2.1.10",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.vr": "1.0.0",
+        "com.unity.modules.xr": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "io.colyseus.sdk": {
+      "version": "https://github.com/colyseus/colyseus-unity3d.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "77fca87056bb1732b41cda493ba9c6d6be61a5b3"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
