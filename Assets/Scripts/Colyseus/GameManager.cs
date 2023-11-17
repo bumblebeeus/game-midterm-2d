@@ -89,9 +89,6 @@ public class GameManager : MonoBehaviour
                state.players.ForEach((sessionId, playerData) =>
                {
                    if (sessionId.Equals(multiplayer.GetCurrentSessionId())) return;
-                   // otherPlayers[counter].transform.position = 
-                   //     Vector2.Lerp(otherPlayers[counter].transform.position, 
-                   //         new Vector2(playerData.x, playerData.y), 0.2f);
                    otherPlayers[counter].transform.position = 
                            new Vector2(playerData.x, playerData.y);
                    counter += 1;

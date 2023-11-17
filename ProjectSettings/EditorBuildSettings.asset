@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ASyncLoading.unity
-    guid: 000420561a60ceef9ad989c577572001
+    path: Assets/Scenes/Multiplayer.unity
+    guid: 50ec82c5f6c60cc40bc28b9bee32685d
   - enabled: 1
-    path: Assets/Scenes/SampleScene-ForTestingOnly.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/SampleScene 2 (Multiplayer communication).unity
-    guid: fdd2dfd0b4379d14a885a87a4caa2593
+    path: Assets/Scenes/SceneLevel1.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/UI Pop ups/Menu.unity
-    guid: 7fda7e89df32ef047951262a34bb9a8b
+    path: Assets/Scenes/SceneLevel2.unity
+    guid: e33c837ca90364df98b1f1e35389c1f2
+  - enabled: 1
+    path: Assets/Scenes/SceneLevel3.unity
+    guid: 16e77220569424a8f86ed26ccf4ca25e
   m_configObjects: {}

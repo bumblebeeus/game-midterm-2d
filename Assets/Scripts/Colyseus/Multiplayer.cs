@@ -43,6 +43,14 @@ public class Multiplayer
         });
     }
 
+    public void OnMapChange(Action<uint> callback)
+    {
+        cachedRoom?.State.OnMapIdChange((newVal, _) =>
+        {
+            callback(newVal);
+        });
+    }
+
     public void OnChange(Action<GameStateSchema, bool> callback)
     {
         if (cachedRoom != null)
@@ -51,6 +59,14 @@ public class Multiplayer
             {
                 callback(state, firstState);
             };
+        }
+    }
+
+    public void LoopThrough(Action<string, PlayerSchema> callback)
+    {
+        if (cachedRoom != null)
+        {
+            cachedRoom.State.players.ForEach(callback);
         }
     }
 

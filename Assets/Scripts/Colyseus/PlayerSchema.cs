@@ -18,6 +18,9 @@ public partial class PlayerSchema : Schema {
 	[Type(2, "boolean")]
 	public bool isFlip = default(bool);
 
+	[Type(3, "int32")]
+	public int skinId = default(int);
+
 	/*
 	 * Support for individual property change callbacks below...
 	 */
@@ -58,11 +61,24 @@ public partial class PlayerSchema : Schema {
 		};
 	}
 
+	protected event PropertyChangeHandler<int> __skinIdChange;
+	public Action OnSkinIdChange(PropertyChangeHandler<int> __handler, bool __immediate = true) {
+		if (__callbacks == null) { __callbacks = new SchemaCallbacks(); }
+		__callbacks.AddPropertyCallback(nameof(this.skinId));
+		__skinIdChange += __handler;
+		if (__immediate && this.skinId != default(int)) { __handler(this.skinId, default(int)); }
+		return () => {
+			__callbacks.RemovePropertyCallback(nameof(skinId));
+			__skinIdChange -= __handler;
+		};
+	}
+
 	protected override void TriggerFieldChange(DataChange change) {
 		switch (change.Field) {
 			case nameof(x): __xChange?.Invoke((float) change.Value, (float) change.PreviousValue); break;
 			case nameof(y): __yChange?.Invoke((float) change.Value, (float) change.PreviousValue); break;
 			case nameof(isFlip): __isFlipChange?.Invoke((bool) change.Value, (bool) change.PreviousValue); break;
+			case nameof(skinId): __skinIdChange?.Invoke((int) change.Value, (int) change.PreviousValue); break;
 			default: break;
 		}
 	}
