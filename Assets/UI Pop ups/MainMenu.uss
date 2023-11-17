@@ -3,7 +3,7 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
-    font-size: 35px;
+    font-size: 50%;
     -unity-font-style: bold;
     -unity-text-align: middle-center;
     background-color: rgba(0, 0, 0, 0);
@@ -11,7 +11,7 @@
 }
 
 .menu-button:hover {
-    font-size: 40px;
+    font-size: 50%;
     color: rgb(255, 255, 255);
     rotate: -10deg;
     transition-duration: 0.2s;
