@@ -25,6 +25,8 @@
 
 # Visual Studio cache directory
 .vs/
+.vscode/
+.vsconfig
 
 # Gradle cache directory
 .gradle/
@@ -75,4 +77,4 @@ crashlytics-build.properties
 .idea/
 
 # Environment variables
-Environment.json
+Assets/Scripts/Configs/Environment.json
