@@ -1,50 +1,67 @@
-using MySql.Data.MySqlClient;
 using UnityEngine;
 using System.IO;
+using UnityEditor.PackageManager;
 
-public class DatabaseManager : MonoBehaviour
-{
-    [System.Serializable]
-    public class DatabaseConfig
+// This class manages the connection to a MySQL database using the MySqlConnector library.
+
+namespace DataBase {
+    public class DatabaseManager
     {
-        public string server;
-        public int port;
-        public string database;
-        public string user_id;
-        public string password;
-        public bool pooling;
-    }
-
-    DatabaseConfig config;
-
-    private void Start()
-    {
-        string configPath = Application.streamingAssetsPath + "/Configs/ProdDatabaseConfig.json";
-        string json = File.ReadAllText(configPath);
-        DatabaseConfig config = JsonUtility.FromJson<DatabaseConfig>(json);
-        Connect(config);
-    }
-
-    private void Connect(DatabaseConfig config)
-    {
-        MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-        builder.Server = config.server;
-        builder.Port = config.port;
-        builder.UserID = config.user_id;
-        builder.Password = config.password;
-        builder.Database = config.database;
-
-        try
+        // This class represents the configuration for the database connection.
+        // The [System.Serializable] attribute makes this class able to be serialized.
+        // Serialization is the process of converting the state of an object into a form that can be persisted or transported.
+        [System.Serializable]
+        public class DatabaseConfig
         {
-            using (MySqlConnection connection = new MySqlConnection(builder.ToString()))
-            {
-                connection.Open();
-                print("MySQL - Opened Connection");
+            public string server; // The server name or IP address.
+            public int port; // The port number.
+            public string database; // The name of the database.
+            public string user_id; // The user ID for the database.
+            public string password; // The password for the database.
+            public bool pooling; // Whether connection pooling is enabled.
+
+            private DatabaseConfig() {}
+
+            static private DatabaseConfig instance = null;
+
+            private static DatabaseConfig loadConfig() {
+                EnvironmentConfig envConfig = EnvironmentConfig.getInstance();
+                string dbConfigPath = Application.dataPath;
+
+                if (envConfig.environment == "prod") {
+                    dbConfigPath = string.Concat(dbConfigPath, "/", envConfig.databaseConfig.prod);
+                } else {
+                    dbConfigPath = string.Concat(dbConfigPath, "/", envConfig.databaseConfig.dev);
+                }
+
+                string json = File.ReadAllText(dbConfigPath);
+                DatabaseConfig config = JsonUtility.FromJson<DatabaseConfig>(json);
+
+                return config;
+            }
+
+            public static DatabaseConfig getInstance() {
+                if (DatabaseConfig.instance is null) {
+                    DatabaseConfig.instance = DatabaseConfig.loadConfig();
+                }
+
+                return DatabaseConfig.instance;
             }
         }
-        catch (MySqlException exception)
-        {
-            print(exception.Message);
+
+        private DatabaseConfig config; // The configuration for the database connection.
+
+        private static DatabaseManager instance = null;
+        
+        private DatabaseManager() {}
+
+        public static DatabaseManager getInstance() {
+            if (DatabaseManager.instance is null) {
+                DatabaseManager.instance = new DatabaseManager();
+                DatabaseManager.instance.config = DatabaseConfig.getInstance();
+            }
+
+            return DatabaseManager.instance;
         }
     }
 }
