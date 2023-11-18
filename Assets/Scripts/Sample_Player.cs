@@ -1,5 +1,5 @@
-using System.Collections;
 using System;
+using System.Collections;
 using System.Numerics;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
@@ -16,8 +16,7 @@ public class Player : MonoBehaviour
     public PhysicsMaterial2D normal;
     public PhysicsMaterial2D bounce;
     public GameObject controllerGameObject;
-    
-    
+
     public LayerMask layerMask;
     private Animator animator;
     private Vector2 currVel;
@@ -59,6 +58,15 @@ public class Player : MonoBehaviour
         inputController = controllerGameObject.GetComponent<CrossInputController>();
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("YellowStar"))
+        {
+            // Debug.Log("Win");
+            // Show the WinPopup here
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         raycast = true;
@@ -66,11 +74,18 @@ public class Player : MonoBehaviour
 
     private bool IsTouchGround()
     {
-        if (!raycast) return false;
+        if (!raycast)
+            return false;
 #if UNITY_EDITOR
-        Debug.DrawLine(transform.position, transform.position + Vector3.down * distanceGroundCheck, Color.red);
+        Debug.DrawLine(
+            transform.position,
+            transform.position + Vector3.down * distanceGroundCheck,
+            Color.red
+        );
 #endif
-        return Physics2D.Raycast(transform.position, Vector2.down, distanceGroundCheck, layerMask).collider != null;
+        return Physics2D
+                .Raycast(transform.position, Vector2.down, distanceGroundCheck, layerMask)
+                .collider != null;
     }
 
     // Update is called once per frame
@@ -125,7 +140,7 @@ public class Player : MonoBehaviour
             }
 
             if (keyboardHorizontal != 0)
-                currVel = isFlip?maxVel*inverseX:maxVel;
+                currVel = isFlip ? maxVel * inverseX : maxVel;
             else
             {
                 currVel = Vector2.zero;
@@ -144,6 +159,7 @@ public class Player : MonoBehaviour
     {
         rb.AddForce(currVel);
         rb.velocity = Vector2.ClampMagnitude(rb.velocity, speed * 3f);
-        if (isFill) jumpGauge = Mathf.Clamp(jumpGauge + GAUGE_PER_TICK, 0, 1);
+        if (isFill)
+            jumpGauge = Mathf.Clamp(jumpGauge + GAUGE_PER_TICK, 0, 1);
     }
 }
