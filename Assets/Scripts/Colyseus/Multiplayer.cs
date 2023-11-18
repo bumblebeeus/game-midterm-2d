@@ -6,7 +6,7 @@ using Colyseus;
 // Singleton
 public class Multiplayer
 {
-    private readonly ColyseusClient client = new("ws://54.211.230.179:9999");
+    private readonly ColyseusClient client = new("wss://hcmusproject.live");
     private ColyseusRoom<GameStateSchema> cachedRoom;
     private string cachedSessionId;
 

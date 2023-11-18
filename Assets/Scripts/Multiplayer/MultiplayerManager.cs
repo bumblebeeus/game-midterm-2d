@@ -26,7 +26,6 @@ public class MultiplayerManager : MonoBehaviour
     {
         var root = multiplayerPopup.GetComponent<UIDocument>().rootVisualElement;
         var button = root.Q<Button>("Go");
-        var label = root.Q<Label>("Status");
         var textField = root.Q<TextField>("IP");
         var dropdownField = root.Q<DropdownField>("Type");
         
