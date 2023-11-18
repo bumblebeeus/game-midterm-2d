@@ -75,4 +75,4 @@ crashlytics-build.properties
 .idea/
 
 # Environment variables
-Assets/Scripts/Configs/Environment.json
+Environment.json
