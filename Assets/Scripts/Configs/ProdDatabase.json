@@ -1,5 +1,5 @@
 {
-    "server": "sql108.infinityfree.com",
+    "server": "https://bumblebeeus.infinityfreeapp.com/",
     "port": 3306,
     "pooling": true
 }
