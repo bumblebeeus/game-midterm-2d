@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.IO;
-using UnityEditor.PackageManager;
 
 // This class manages the connection to a MySQL database using the MySqlConnector library.
 
@@ -15,9 +14,6 @@ namespace DataBase {
         {
             public string server; // The server name or IP address.
             public int port; // The port number.
-            public string database; // The name of the database.
-            public string user_id; // The user ID for the database.
-            public string password; // The password for the database.
             public bool pooling; // Whether connection pooling is enabled.
 
             private DatabaseConfig() {}
@@ -62,6 +58,11 @@ namespace DataBase {
             }
 
             return DatabaseManager.instance;
+        }
+
+        public string getApiUrl() {
+            Debug.Log(config.server);
+            return config.server;
         }
     }
 }
