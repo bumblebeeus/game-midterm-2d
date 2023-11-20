@@ -167,7 +167,7 @@ public class MultiplayerManager : MonoBehaviour
                otherPlayers[counter].transform.position = 
                    new Vector3(playerData.x, playerData.y, -1);
                otherPlayers[counter].transform.localScale = playerData.isFlip ? 
-                   new Vector3(-1, 1, 1) : new Vector3(1, 1, 1);
+                   new Vector3(-1, 1, 0)*5 : new Vector3(1, 1, 0)*5;
                counter += 1;
            });
        });
