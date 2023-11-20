@@ -165,7 +165,7 @@ public class MultiplayerManager : MonoBehaviour
            {
                if (sessionId.Equals(multiplayer.GetCurrentSessionId())) return;
                otherPlayers[counter].transform.position = 
-                   new Vector2(playerData.x, playerData.y);
+                   new Vector3(playerData.x, playerData.y, -1);
                otherPlayers[counter].transform.localScale = playerData.isFlip ? 
                    new Vector3(-1, 1, 1) : new Vector3(1, 1, 1);
                counter += 1;
