@@ -34,7 +34,7 @@ namespace DataBase {
         public IEnumerator login(string username, string password, System.Action<bool> callback)
         {
             string jsonData = $"{{\"read\": 1, \"username\": \"{username}\", \"password\": \"{password}\" }}";
-            
+
             using (UnityWebRequest www = db.createWebRequest(ApiUrl, "GET", jsonData))
             {
                 yield return www.SendWebRequest();

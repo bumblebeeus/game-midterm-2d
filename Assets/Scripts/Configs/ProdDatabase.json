@@ -1,5 +1,5 @@
 {
-    "server": "https://bumblebeeus.infinityfreeapp.com/",
+    "server": "https://jumpking.ngrok.dev",
     "port": 3306,
     "pooling": true
 }
