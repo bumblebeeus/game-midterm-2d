@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RegisterMenu.unity
     guid: ddf350fca28fbd7e2b18cc0d7f5d7e65
+  - enabled: 1
+    path: Assets/UI Pop ups/Shop.unity
+    guid: f58bb4162c6c1bb449a1bfc2492b723d
   m_configObjects: {}
