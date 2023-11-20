@@ -1,0 +1,7 @@
+{
+    "environment": "prod",
+    "databaseConfig": {
+        "prod": "Scripts/Configs/ProdDatabase.json",
+        "dev": "Scripts/Configs/DevDatabase.json"
+    }
+}
