@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.IO;
+using UnityEngine.Networking;
 
 // This class manages the connection to a MySQL database using the MySqlConnector library.
 
@@ -58,11 +59,30 @@ namespace DataBase {
             }
 
             return DatabaseManager.instance;
+        
         }
 
-        public string getApiUrl() {
-            Debug.Log(config.server);
-            return config.server;
+        public class CertificateWhore : CertificateHandler
+        {
+            protected override bool ValidateCertificate(byte[] certificateData)
+            {
+                return true;
+            }
+        }
+
+        public UnityWebRequest createWebRequest(string url, string requestType, string jsonData) {
+            string apiUrl = this.config.server + "/" + url;
+            UnityWebRequest www = new UnityWebRequest(apiUrl, requestType);
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
+            www.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            www.downloadHandler = new DownloadHandlerBuffer();
+            www.SetRequestHeader("Content-Type", "application/json");
+
+            // TODO: allow this only in testing
+            // Hotfix: Set the custom certificate handler
+            www.certificateHandler = new CertificateWhore();
+
+            return www;
         }
     }
 }

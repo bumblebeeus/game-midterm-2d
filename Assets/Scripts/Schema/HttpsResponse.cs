@@ -5,7 +5,7 @@ namespace DataBase {
     public class HttpsResponse<T> {
         public string error_code;
         public string msg;
-        public List<T> content;
+        public T[] content;
         public bool state;
     }
 }

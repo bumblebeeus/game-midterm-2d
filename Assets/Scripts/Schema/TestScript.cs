@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using DataBase;
 using UnityEngine;
 
 public class TestScript: MonoBehaviour
 {
     void Start()
     {
-        StartCoroutine(DataBase.Player.registerUser("test", "test"));
+        DataBase.Player player = new DataBase.Player();
 
     }
 

@@ -7,80 +7,117 @@ namespace DataBase {
     [System.Serializable]
     public class Player
     {
-        private const string ApiUrl = "players.php";
+        private static string ApiUrl = "players.php";
 
-        public string username;
+        public string username = null;
 
-        private string password;
+        private string password = null;
 
-        public int currentSkin;
+        public int currentSkin = 1;
 
-        public int coins;
+        public int coins = 0;
 
         // TODO: add access token
         // public string accessToken;
         
         private static DatabaseManager db = DatabaseManager.getInstance();
-        private static Player instance = null;
 
-        private Player() {}
+        private static Player currentPlayer = null;
 
-        public static Player getInstance() {
-            if (Player.instance is null) {
-                Player.instance = new Player();
-            }
-
-            return Player.instance;
+        private void saveCurrentInfo(Player other) {
+            this.username = other.username;
+            this.password = other.password;
+            this.currentSkin = other.currentSkin;
+            this.coins = other.coins;
         }
 
-        public bool loggedIn() {
-            return true;
-        }
-
-
-        public void logOut() {
-
-        }
-
-        public class CertificateWhore : CertificateHandler
+        public IEnumerator login(string username, string password, System.Action<bool> callback)
         {
-            protected override bool ValidateCertificate(byte[] certificateData)
-            {
-                return true;
-            }
-        }
-
-        private static UnityWebRequest createWebRequest(string url, string jsonData) {
-            UnityWebRequest www = new UnityWebRequest(url, "POST");
-            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
-            www.uploadHandler = new UploadHandlerRaw(bodyRaw);
-            www.downloadHandler = new DownloadHandlerBuffer();
-            www.SetRequestHeader("Content-Type", "application/json");
-
-            // TODO: allow this only in testing
-            // Hotfix: Set the custom certificate handler
-            www.certificateHandler = new CertificateWhore();
-
-            return www;
-        }
-
-
-        public static IEnumerator registerUser(string username, string password)
-        {
-            using (UnityWebRequest www = createWebRequest(db.getApiUrl() + "/" + ApiUrl, $"{{\"create\": 1, \"username\": \"{username}\", \"password\": \"{password}\" }}"))
+            string jsonData = $"{{\"read\": 1, \"username\": \"{username}\", \"password\": \"{password}\" }}";
+            
+            using (UnityWebRequest www = db.createWebRequest(ApiUrl, "GET", jsonData))
             {
                 yield return www.SendWebRequest();
 
                 if (www.result != UnityWebRequest.Result.Success) {
                     Debug.LogError(www.error);
+                    callback(false);
+                } else {
+                    Debug.Log("GET request has been sent!");
+                    Debug.Log(www.downloadHandler.text);
+
+                    HttpsResponse<Player> response = JsonUtility.FromJson<HttpsResponse<Player>>(www.downloadHandler.text);
+                    Debug.Log(response.content);
+                    if (response.state == true) {
+                        if (response.content.Length == 0) {
+                            Debug.Log(
+                                "Wrong username or password."
+                            );
+                            callback(false);
+                        } else {
+                            // Https response does not include password
+                            currentPlayer.saveCurrentInfo(response.content[0]);
+                            currentPlayer.password = password;
+
+                            callback(true);
+                        }
+
+                        
+                    } else {
+                        Debug.Log(
+                            "Error code: " + response.error_code + "\n" +
+                            "Error msg: " + response.msg);
+                        callback(false);
+                    }
+                }
+            }
+        }
+
+        public bool loggedIn() {
+            return username is not null;
+        }
+
+        public void logOut() {
+            username = null;
+            password = null;
+        }
+
+        public static IEnumerator signUp(string username, string password, System.Action<bool> callback)
+        {
+            string jsonData = $"{{\"create\": 1, \"username\": \"{username}\", \"password\": \"{password}\" }}";
+            using (UnityWebRequest www = db.createWebRequest(ApiUrl, "POST", jsonData))
+            {
+                yield return www.SendWebRequest();
+
+                if (www.result != UnityWebRequest.Result.Success) {
+                    Debug.LogError(www.error);
+                    callback(false);
                 } else {
                     Debug.Log("POST request has been sent!");
                     Debug.Log(www.downloadHandler.text);
 
                     HttpsResponse<Player> response = JsonUtility.FromJson<HttpsResponse<Player>>(www.downloadHandler.text);
+                    
+                    if (response.state == true) {
+                        callback(true);
+                    } else {
+                        Debug.Log(
+                            "Error code: " + response.error_code + "\n" +
+                            "Error msg: " + response.msg);
 
+                        callback(false);
+                    }
                 }
             }           
         }
+
+        public static Player getCurrentPlayer() {
+            if (Player.currentPlayer == null) {
+                Player.currentPlayer = new Player();
+            }
+
+            return Player.currentPlayer;
+        }
+
     }
 }
