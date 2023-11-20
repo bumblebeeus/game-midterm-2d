@@ -61,6 +61,7 @@ public class MenuController : MonoBehaviour
         _doc = GetComponent<UIDocument>();
         var root = _doc.rootVisualElement;
         var _playButton = root.Q<Button>("PlayBtn");
+        var _shopButton = root.Q<Button>("ShopBtn");
         var _multiPlayerButton = root.Q<Button>("MultiPlayerBtn");
         var _exitButton = root.Q<Button>("ExitBtn");
         var _muteButton = root.Q<Button>("MuteBtn");
@@ -131,6 +132,7 @@ public class MenuController : MonoBehaviour
             _mainMenuBtnWrapper.Clear();
             _mainMenuBtnWrapper.Add(_playButton);
             _mainMenuBtnWrapper.Add(_multiPlayerButton);
+            _mainMenuBtnWrapper.Add(_shopButton);
             _mainMenuBtnWrapper.Add(_settingsButton);
             _mainMenuBtnWrapper.Add(_exitButton);
         };
@@ -143,6 +145,11 @@ public class MenuController : MonoBehaviour
             StartCoroutine(OpenScene("SinglePlayer"));
         };
         _multiPlayerButton.clicked += () => StartCoroutine(OpenScene("Multiplayer"));
+
+        _shopButton.clicked += () => {
+            Debug.Log("Shop button clicked");
+            // TODO: pop up shop scene
+        };
         _settingsButton.clicked += () =>
         {
             _mainMenuBtnWrapper.Clear();
