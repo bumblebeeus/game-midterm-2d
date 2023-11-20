@@ -6,6 +6,7 @@
             <ui:VisualElement name="Buttons" style="flex-grow: 1; justify-content: space-around; min-width: 500px; width: auto; align-items: center; height: 75%;">
                 <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayBtn" class="menu-button" />
                 <ui:Button text="Play with friends" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MultiPlayerBtn" class="menu-button" />
+                <ui:Button text="Shop" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ShopBtn" class="menu-button" />
                 <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingsBtn" class="menu-button" />
                 <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitBtn" class="menu-button" />
             </ui:VisualElement>
