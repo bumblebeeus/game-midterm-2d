@@ -33,7 +33,7 @@ public class ShopManager : MonoBehaviour
             shopItemSO[i].image = ...;
             */
             shopItemSO[i].baseCost = 150;
-            shopItemSO[i].title = "NewTitle";
+            shopItemSO[i].title = "Example";
             shopItemSO[i].image = Resources.Load<Sprite>("skin2");
             // about the Resources.Load, please read the docs here:
             // https://docs.unity3d.com/ScriptReference/Resources.Load.html
