@@ -109,7 +109,10 @@ public class Player : MonoBehaviour
                     animator.Play("move");
                     break;
                 default:
-                    animator.Play("idle");
+                    if (!isFill)
+                    {
+                        animator.Play("idle");
+                    }
                     break;
             }
             transform.localScale = isFlip ? lookRight * inverseX : lookRight;
