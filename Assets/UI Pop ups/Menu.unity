@@ -343,8 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41074ce968105d243946787498350cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _muteSprite: {fileID: 21300000, guid: b4214e926b556b8479ad782853164490, type: 3}
-  _unmuteSprite: {fileID: 21300000, guid: a87e00001ab52ee4bb2ed1acf767b152, type: 3}
+  _muteSprite: {fileID: 21300000, guid: a87e00001ab52ee4bb2ed1acf767b152, type: 3}
+  _unmuteSprite: {fileID: 21300000, guid: b4214e926b556b8479ad782853164490, type: 3}
   _settingBtnMenu: {fileID: 9197481963319205126, guid: 4c582f94611d93444a13b8735ecdd399, type: 3}
   chooseLevelObject: {fileID: 1745068505}
 --- !u!82 &1211957195
