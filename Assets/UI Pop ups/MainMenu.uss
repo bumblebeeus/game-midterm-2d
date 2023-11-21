@@ -3,16 +3,34 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
-    font-size: 50%;
+    font-size: 22px;
     -unity-font-style: bold;
     -unity-text-align: middle-center;
     background-color: rgba(0, 0, 0, 0);
     color: rgb(255, 255, 255);
+    background-image: url('project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-large-buttons-horizontal.png?fileID=-1075899688&guid=3d2ceb4de2a713147abc06da178fec62&type=3#ui-large-buttons-horizontal_10');
+    -unity-font-definition: initial;
+    -unity-font: url('project://database/Assets/Monocraft.ttf?fileID=12800000&guid=2c054a3d795d80940aa2bfb37c05591f&type=3#Monocraft');
+    -unity-text-outline-width: 0;
+    letter-spacing: 0;
+    word-spacing: 0;
+    -unity-paragraph-spacing: 0;
+    margin-top: 0;
+    padding-top: 0;
+    flex-grow: 1;
+    margin-right: 0;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .menu-button:hover {
-    font-size: 50%;
+    font-size: 22px;
     color: rgb(255, 255, 255);
     rotate: -10deg;
     transition-duration: 0.2s;
+    background-image: url('project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-large-buttons-horizontal.png?fileID=-1251640043&guid=3d2ceb4de2a713147abc06da178fec62&type=3#ui-large-buttons-horizontal_11');
+    -unity-font-definition: initial;
+    -unity-font: url('project://database/Assets/Monocraft.ttf?fileID=12800000&guid=2c054a3d795d80940aa2bfb37c05591f&type=3#Monocraft');
+    padding-right: 30px;
+    padding-left: 30px;
 }

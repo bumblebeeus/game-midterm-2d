@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PanelSettings: {fileID: 11400000, guid: 9b27e82acf30dc74bb29f0e27c353ddb, type: 2}
+  m_PanelSettings: {fileID: 11400000, guid: 07dd52deeb378dc4a8946b2de1cc934f, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 61ed903f19eec434692f0977166a5c0e, type: 3}
   m_SortingOrder: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PanelSettings: {fileID: 11400000, guid: 9b27e82acf30dc74bb29f0e27c353ddb, type: 2}
+  m_PanelSettings: {fileID: 11400000, guid: 07dd52deeb378dc4a8946b2de1cc934f, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 7d9cd67f2efa58441a7dacb1d5118a22, type: 3}
   m_SortingOrder: 0

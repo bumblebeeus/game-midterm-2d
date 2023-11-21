@@ -1,10 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Pop%20ups/MainMenu.uss?fileID=7433441132597879392&amp;guid=3ae27bfd0e9d8f94eafa778b45ff74df&amp;type=3#MainMenu" />
     <ui:VisualElement name="Menu" style="flex-grow: 1; flex-direction: row;">
-        <ui:VisualElement name="LeftSection" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.5); width: 30%; height: 100%; margin-left: 2%; align-items: center; flex-direction: column;">
-            <ui:VisualElement name="Banner" style="background-image: resource(&apos;jko-logo-1024&apos;); width: 80%; height: 15%; align-items: center; -unity-background-scale-mode: scale-to-fit; flex-grow: 1; flex-shrink: 1; flex-direction: column;" />
-            <ui:VisualElement name="Buttons" style="flex-grow: 1; justify-content: space-around; min-width: 500px; width: auto; align-items: center; height: 75%;">
-                <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayBtn" class="menu-button" />
+        <ui:VisualElement name="LeftSection" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 30%; height: 100%; margin-left: 2%; align-items: center; flex-direction: column; background-image: url(&apos;project://database/Assets/OArielG/2DSimpleUIPack/Sprites/ui-panels.png?fileID=-1778949005&amp;guid=84873522082196348b931e3f46de09e9&amp;type=3#ui-panels_1&apos;); -unity-background-scale-mode: stretch-to-fill; -unity-slice-left: 24; -unity-slice-top: 24; -unity-slice-right: 24; -unity-slice-bottom: 24; -unity-slice-scale: 1px; padding-top: 20px; padding-bottom: 20px;">
+            <ui:VisualElement name="Banner" style="background-image: resource(&apos;jko-logo-1024&apos;); width: 100%; height: 30%; align-items: center; -unity-background-scale-mode: scale-to-fit; flex-grow: 1; flex-shrink: 1; flex-direction: column;" />
+            <ui:VisualElement name="Buttons" style="flex-grow: 1; justify-content: flex-start; width: auto; align-items: stretch; height: auto; align-self: auto; flex-shrink: 1;">
+                <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PlayBtn" class="menu-button" style="align-self: auto; align-items: auto;" />
                 <ui:Button text="Play with friends" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MultiPlayerBtn" class="menu-button" />
                 <ui:Button text="Shop" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ShopBtn" class="menu-button" />
                 <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SettingsBtn" class="menu-button" />
@@ -12,7 +12,7 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="RightSection" style="flex-grow: 1; width: 40%; height: 100%; align-items: flex-end; justify-content: flex-end; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px;">
-            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="MuteBtn" class="menu-button" style="background-image: resource(&apos;audio&apos;); width: 5%; height: 5%;" />
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="MuteBtn" class="menu-button" style="background-image: resource(&apos;audio&apos;); width: 5%; height: 5%; flex-grow: 0.1;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
