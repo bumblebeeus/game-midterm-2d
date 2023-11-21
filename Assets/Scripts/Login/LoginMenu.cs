@@ -18,7 +18,7 @@ public class LoginMenu : MonoBehaviour
         SceneManager.LoadScene("RegisterMenu");
     }
 
-    private void goToMainMenu() {
+    public void goToMainMenu() {
         SceneManager.LoadScene("Menu");
     }
 

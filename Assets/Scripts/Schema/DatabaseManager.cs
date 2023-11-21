@@ -22,17 +22,23 @@ namespace DataBase {
             static private DatabaseConfig instance = null;
 
             private static DatabaseConfig loadConfig() {
-                EnvironmentConfig envConfig = EnvironmentConfig.getInstance();
-                string dbConfigPath = Application.dataPath;
+                // EnvironmentConfig envConfig = EnvironmentConfig.getInstance();
+                // string dbConfigPath = Application.dataPath;
 
-                if (envConfig.environment == "prod") {
-                    dbConfigPath = string.Concat(dbConfigPath, "/", envConfig.databaseConfig.prod);
-                } else {
-                    dbConfigPath = string.Concat(dbConfigPath, "/", envConfig.databaseConfig.dev);
-                }
+                // if (envConfig.environment == "prod") {
+                //     dbConfigPath = string.Concat(dbConfigPath, "/", envConfig.databaseConfig.prod);
+                // } else {
+                //     dbConfigPath = string.Concat(dbConfigPath, "/", envConfig.databaseConfig.dev);
+                // }
 
-                string json = File.ReadAllText(dbConfigPath);
-                DatabaseConfig config = JsonUtility.FromJson<DatabaseConfig>(json);
+                // string json = File.ReadAllText(dbConfigPath);
+                // DatabaseConfig config = JsonUtility.FromJson<DatabaseConfig>(json);
+
+                DatabaseConfig config = new DatabaseConfig();
+
+                config.server = "https://jumpking.ngrok.dev";
+                config.port = 3306;
+                config.pooling = true;
 
                 return config;
             }
