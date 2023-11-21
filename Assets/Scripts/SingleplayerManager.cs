@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 
 public class SingleplayerManager : MonoBehaviour
 {
+    private DataBase.Player playerSchema = DataBase.Player.getCurrentPlayer();
+
     public MapInfo[] maps;
     public GameObject[] skins;
     public GameObject selectMapPopup;
@@ -61,8 +63,8 @@ public class SingleplayerManager : MonoBehaviour
 
     void StartGame()
     {
-        // TODO: replace with correct skin id
-        currentPlayer = Instantiate(skins[0],
+        Debug.Log("Current skin: " + playerSchema.current_skin.ToString());
+        currentPlayer = Instantiate(skins[playerSchema.current_skin - 1],
             maps[selectedMap].startPos, Quaternion.identity).transform.GetChild(0).gameObject;
         isStart = true;
     }

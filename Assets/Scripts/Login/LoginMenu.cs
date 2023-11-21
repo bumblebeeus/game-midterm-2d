@@ -14,16 +14,12 @@ public class LoginMenu : MonoBehaviour
 
     public Text systemNotif;
 
-    public void backLoginMenu() {
-        SceneManager.LoadScene(6);
-    }
-
     public void goToRegister() {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene("RegisterMenu");
     }
 
     private void goToMainMenu() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
 
     public void login()

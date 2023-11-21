@@ -15,7 +15,7 @@ public class RegisterMenu : MonoBehaviour
     public Text systemNotif;
 
     public void backLoginMenu() {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene("LoginMenu");
     }
 
     public void register()
@@ -24,7 +24,7 @@ public class RegisterMenu : MonoBehaviour
             if (success) {
                 systemNotif.text = "Register successfully.\nClick 'Back' to return Login Menu.";
             } else {
-                systemNotif.text = "Register failed.\nUsername have existed, please choose another.";
+                systemNotif.text = "Register failed.\nUsername has existed, please choose another.";
             }
         }));
     }

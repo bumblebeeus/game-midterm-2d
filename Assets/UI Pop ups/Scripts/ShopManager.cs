@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using Unity.VisualScripting;
-
-// TODO: adapt coin in this file
 
 public class ShopManager : MonoBehaviour
 {
+    private DataBase.Player schemaPlayer = DataBase.Player.getCurrentPlayer();
+
     public int coins; // user's remaining coins
     public TMP_Text coinUI;
     public ShopItemSO[] shopItemSO;

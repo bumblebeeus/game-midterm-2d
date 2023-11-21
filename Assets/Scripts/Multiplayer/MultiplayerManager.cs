@@ -9,6 +9,8 @@ using UnityEngine.UIElements;
 
 public class MultiplayerManager : MonoBehaviour
 {
+    private DataBase.Player playerSchema = DataBase.Player.getCurrentPlayer();
+
     public MapInfo[] maps;
     public GameObject[] skins;
     public GameObject multiplayerPopup;
@@ -59,8 +61,8 @@ public class MultiplayerManager : MonoBehaviour
                 {
                     var roomId = textField.text;
                     await multiplayer.JoinRoom(roomId);
-                    // TODO: replace with real skinId
-                    await multiplayer.SendData("changeSkin", new { skinId = 0 });
+
+                    await multiplayer.SendData("changeSkin", new { skinId = playerSchema.current_skin - 1 });
                     break;
                 }
                 default:
@@ -70,8 +72,7 @@ public class MultiplayerManager : MonoBehaviour
                     if (mapId == 100) return;
                     // And set the initial position
                     await multiplayer.SendData("changeMap", new { mapId = mapId });
-                    // TODO: replace with real skinId
-                    await multiplayer.SendData("changeSkin", new { skinId = 0 });
+                    await multiplayer.SendData("changeSkin", new { skinId = playerSchema.current_skin - 1 });
                     var startPos = maps[mapId].startPos;
                     await multiplayer.SendData("initPos", new {x=startPos.x, y=startPos.y, isFlip=false});
                     await multiplayer.SendData("start", new {});

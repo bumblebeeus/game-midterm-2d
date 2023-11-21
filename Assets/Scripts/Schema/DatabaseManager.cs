@@ -78,7 +78,6 @@ namespace DataBase {
             www.downloadHandler = new DownloadHandlerBuffer();
             www.SetRequestHeader("Content-Type", "application/json");
 
-            // TODO: allow this only in testing
             // Hotfix: Set the custom certificate handler
             www.certificateHandler = new CertificateWhore();
 

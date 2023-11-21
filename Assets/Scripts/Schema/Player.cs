@@ -13,21 +13,18 @@ namespace DataBase {
 
         private string password = null;
 
-        public int currentSkin = 1;
+        public int current_skin = 1;
 
         public int coins = 0;
-
-        // TODO: add access token
-        // public string accessToken;
         
         private static DatabaseManager db = DatabaseManager.getInstance();
 
-        private static Player currentPlayer = null;
+        private static Player currentPlayer = new DataBase.Player();
 
-        private void saveCurrentInfo(Player other) {
+        private void  saveCurrentInfo(Player other) {
             this.username = other.username;
             this.password = other.password;
-            this.currentSkin = other.currentSkin;
+            this.current_skin = other.current_skin;
             this.coins = other.coins;
         }
 
@@ -56,6 +53,7 @@ namespace DataBase {
                             callback(false);
                         } else {
                             // Https response does not include password
+                            Debug.Log(response.content[0].current_skin);
                             currentPlayer.saveCurrentInfo(response.content[0]);
                             currentPlayer.password = password;
 
