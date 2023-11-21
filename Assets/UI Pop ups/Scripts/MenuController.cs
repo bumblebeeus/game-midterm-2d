@@ -10,25 +10,6 @@ using System.Runtime.CompilerServices;
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(UIDocument))]
 
-public class SettingsManager
-{
-    private static SettingsManager _instance;
-
-    public static SettingsManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = new SettingsManager();
-            }
-            return _instance;
-        }
-    }
-
-    public float Volume { get; set; } = 0.5f;
-    public bool IsFullScreen { get; set; } = false;
-}
 
 public class MenuController : MonoBehaviour
 {
@@ -53,7 +34,7 @@ public class MenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnEnable()
@@ -190,7 +171,7 @@ public class MenuController : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         // The Application loads the Scene in the background at the same time as the current Scene.
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, 
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName,
             LoadSceneMode.Additive);
         // Wait until the last operation fully loads to return anything
         while (!asyncLoad.isDone)
@@ -198,7 +179,7 @@ public class MenuController : MonoBehaviour
             yield return null;
         }
         Destroy(gameObject);
-        
+
         // Unload the previous Scene
         SceneManager.UnloadSceneAsync(currentScene);
     }
@@ -234,4 +215,25 @@ public class MenuController : MonoBehaviour
             _audioSource.Pause();
         }
     }
+}
+
+
+public class SettingsManager
+{
+    private static SettingsManager _instance;
+
+    public static SettingsManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new SettingsManager();
+            }
+            return _instance;
+        }
+    }
+
+    public float Volume { get; set; } = 0.5f;
+    public bool IsFullScreen { get; set; } = false;
 }
