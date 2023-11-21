@@ -28,6 +28,8 @@ public class MultiplayerManager : MonoBehaviour
         var button = root.Q<Button>("Go");
         var textField = root.Q<TextField>("IP");
         var dropdownField = root.Q<DropdownField>("Type");
+        var exitBtn = root.Q<Button>("Exit");
+        exitBtn.clicked += () => StartCoroutine(BackToMain());
         
         dropdownField.choices = new List<string>()
         {
@@ -110,6 +112,23 @@ public class MultiplayerManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(currentScene);
         StartGame();
     }
+    
+    IEnumerator BackToMain()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        // The Application loads the Scene in the background at the same time as the current Scene.
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Menu", LoadSceneMode.Additive);
+        // Wait until the last operation fully loads to return anything
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        
+        Destroy(gameObject);
+        // Unload the previous Scene
+        SceneManager.UnloadSceneAsync(currentScene);
+    }
+    
 
     IEnumerator JumpBackToMainMenu()
     {

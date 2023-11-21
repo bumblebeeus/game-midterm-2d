@@ -67,10 +67,11 @@ public class SingleplayerManager : MonoBehaviour
         isStart = true;
     }
     
-    IEnumerator JumpBackToMainMenu()
+    IEnumerator JumpBackToMainMenu(bool needWait = true)
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        yield return new WaitForSeconds(5);
+        if (needWait)
+            yield return new WaitForSeconds(5);
         // The Application loads the Scene in the background at the same time as the current Scene.
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Menu", 
             LoadSceneMode.Additive);
@@ -89,7 +90,7 @@ public class SingleplayerManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         selectedMap = await SelectMapHandle();
-        StartCoroutine(selectedMap == 100 ? JumpBackToMainMenu() : LoadGameScene());
+        StartCoroutine(selectedMap == 100 ? JumpBackToMainMenu(false) : LoadGameScene());
     }
 
     // Update is called once per frame
