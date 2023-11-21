@@ -44,6 +44,7 @@ public class MenuController : MonoBehaviour
         var _playButton = root.Q<Button>("PlayBtn");
         var _shopButton = root.Q<Button>("ShopBtn");
         var _multiPlayerButton = root.Q<Button>("MultiPlayerBtn");
+        var _logoutButton = root.Q<Button>("LogoutBtn");
         var _exitButton = root.Q<Button>("ExitBtn");
         var _muteButton = root.Q<Button>("MuteBtn");
         var _settingsButton = root.Q<Button>("SettingsBtn");
@@ -105,6 +106,12 @@ public class MenuController : MonoBehaviour
             SettingsManager.Instance.IsFullScreen = changeEvent.newValue;
         });
 
+        _logoutButton.clicked += () =>
+        {
+            Debug.Log("Logout button clicked");
+            // TODO: pop up logout scene
+        };
+
 
         // AudioListener.volume = 0.5f;
 
@@ -115,6 +122,7 @@ public class MenuController : MonoBehaviour
             _mainMenuBtnWrapper.Add(_multiPlayerButton);
             _mainMenuBtnWrapper.Add(_shopButton);
             _mainMenuBtnWrapper.Add(_settingsButton);
+            _mainMenuBtnWrapper.Add(_logoutButton);
             _mainMenuBtnWrapper.Add(_exitButton);
         };
 
