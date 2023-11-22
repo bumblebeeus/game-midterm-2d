@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using DataBase;
 using UnityEngine.Assertions;
+using UnityEngine.SceneManagement;
 
 public class ShopManager : MonoBehaviour
 {
@@ -49,6 +50,10 @@ public class ShopManager : MonoBehaviour
         }));
 
         
+    }
+
+    public void returnMenu() {
+        SceneManager.LoadScene("Menu");
     }
 
     // Update is called once per frame
