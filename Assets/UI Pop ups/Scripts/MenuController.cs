@@ -112,6 +112,7 @@ public class MenuController : MonoBehaviour
         {
             Debug.Log("Logout button clicked");
             playerSchema.logOut();
+            StartCoroutine(OpenScene("LoginMenu"));
         };
 
 
