@@ -7,7 +7,7 @@ namespace DataBase {
     [System.Serializable]
     public class Player
     {
-        private static string ApiUrl = "players.php";
+        private static string ApiUrl = "players_api.php";
 
         public string username = null;
 
@@ -40,7 +40,7 @@ namespace DataBase {
                     Debug.LogError(www.error);
                     callback(false);
                 } else {
-                    Debug.Log("GET request has been sent!");
+                    Debug.Log("[Player] GET login request has been sent!");
                     Debug.Log(www.downloadHandler.text);
 
                     HttpsResponse<Player> response = JsonUtility.FromJson<HttpsResponse<Player>>(www.downloadHandler.text);
@@ -80,6 +80,34 @@ namespace DataBase {
             password = null;
         }
 
+        public IEnumerator updateBasicInfo(System.Action<bool> callback) {
+            string jsonData = $"{{\"update\": 1, \"username\": \"{this.username}\", \"current_skin\": \"{this.current_skin}\", \"coins\": \"{this.coins}\"}}";
+            Debug.Log(jsonData);
+            using (UnityWebRequest www = db.createWebRequest(ApiUrl, "POST", jsonData))
+            {
+                yield return www.SendWebRequest();
+
+                if (www.result != UnityWebRequest.Result.Success) {
+                    Debug.LogError(www.error);
+                    callback(false);
+                } else {
+                    Debug.Log("[Player] POST update basic info request has been sent!");
+                    Debug.Log(www.downloadHandler.text);
+
+                    HttpsResponse<Player> response = JsonUtility.FromJson<HttpsResponse<Player>>(www.downloadHandler.text);
+                    if (response.state == true) {
+                        callback(true);
+                    } else {
+                        Debug.Log(
+                            "Error code: " + response.error_code + "\n" +
+                            "Error msg: " + response.msg);
+
+                        callback(false);
+                    }
+                }
+            }
+        }
+
         public static IEnumerator signUp(string username, string password, System.Action<bool> callback)
         {
             string jsonData = $"{{\"create\": 1, \"username\": \"{username}\", \"password\": \"{password}\" }}";
@@ -91,7 +119,7 @@ namespace DataBase {
                     Debug.LogError(www.error);
                     callback(false);
                 } else {
-                    Debug.Log("POST request has been sent!");
+                    Debug.Log("POST sign up request has been sent!");
                     Debug.Log(www.downloadHandler.text);
 
                     HttpsResponse<Player> response = JsonUtility.FromJson<HttpsResponse<Player>>(www.downloadHandler.text);

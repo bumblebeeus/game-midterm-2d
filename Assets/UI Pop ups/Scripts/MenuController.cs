@@ -13,6 +13,8 @@ using System.Runtime.CompilerServices;
 
 public class MenuController : MonoBehaviour
 {
+    private DataBase.Player playerSchema = DataBase.Player.getCurrentPlayer();
+
     private UIDocument _doc;
     private VisualElement _mainMenuBtnWrapper;
     private static AudioSource _audioSource;
@@ -109,7 +111,7 @@ public class MenuController : MonoBehaviour
         _logoutButton.clicked += () =>
         {
             Debug.Log("Logout button clicked");
-            // TODO: pop up logout scene
+            playerSchema.logOut();
         };
 
 
@@ -137,7 +139,7 @@ public class MenuController : MonoBehaviour
 
         _shopButton.clicked += () => {
             Debug.Log("Shop button clicked");
-            // TODO: pop up shop scene
+            StartCoroutine(OpenScene("Shop"));
         };
         _settingsButton.clicked += () =>
         {
