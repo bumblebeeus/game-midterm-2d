@@ -33,7 +33,7 @@ public class ShopManager : MonoBehaviour
                     shopItemSO[i].image = ...;
                     */
                     shopItemSO[i].baseCost = skins[i].price;
-                    shopItemSO[i].title = "Skin " + i.ToString();
+                    shopItemSO[i].title = skins[i].asset_path;
                     shopItemSO[i].image = Resources.Load<Sprite>("skin" + (i + 1).ToString());
                     // about the Resources.Load, please read the docs here:
                     // https://docs.unity3d.com/ScriptReference/Resources.Load.html
